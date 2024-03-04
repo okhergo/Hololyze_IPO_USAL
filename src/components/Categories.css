@@ -1,6 +1,4 @@
-.container{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    justify-content: space-between;
-}
+.gutter-box {
+    padding: 8px 0;
+    background: #00a0e9;
+  }

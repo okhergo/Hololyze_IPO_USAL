@@ -43,13 +43,9 @@ function App() {
         <Content style={{ overflow: 'initial' }}>
           <div style={{ padding: 24, textAlign: 'center', background: colorBgContainer }}>
             <CustomCarousel/>
-            <h2>Tecnología</h2>
             <Categories></Categories>
-            <h2>Cuidado personal</h2>
             <Categories></Categories>
-            <h2>Mascotas</h2>
             <Categories></Categories>
-            <h2>Ropa</h2>
             <Categories></Categories>
           </div>
         </Content>

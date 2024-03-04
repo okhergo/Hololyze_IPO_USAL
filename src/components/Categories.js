@@ -1,21 +1,24 @@
 import React from 'react';
 import CustomCard from './Card';
-import { Col, Row } from 'antd';
+import { Col, Row, Divider } from 'antd';
 import './Categories.css';
 
 function Categories (){
     return(
-    <Row>
-        <Col span={24/3}>
-            <CustomCard></CustomCard>
-        </Col>
-        <Col span={24/3}>
-            <CustomCard></CustomCard>
-        </Col>
-        <Col span={24/3}>
-            <CustomCard></CustomCard>
-        </Col>
-    </Row>
+    <div>
+        <Divider orientation="left">Prueba</Divider>
+        <Row gutter={16}>
+            <Col className="gutter-row" span={6}>
+                <CustomCard></CustomCard>
+            </Col>
+            <Col className="gutter-row" span={6}>
+                <CustomCard></CustomCard>
+            </Col>
+            <Col className="gutter-row" span={6}>
+                <CustomCard></CustomCard>
+            </Col>
+        </Row>
+    </div>
     );
 }
 export default Categories;
