@@ -1,0 +1,17 @@
+.img-box {
+    height: 300px;
+    position: relative;
+    }
+    
+    .img-box img {
+        width: 100%;
+        height: auto;
+        border-radius: 20px;
+    }
+    
+    .img-box h2 {
+        position: absolute;
+        top: 10%;
+        left: 10%;
+        text-align: left;
+    }

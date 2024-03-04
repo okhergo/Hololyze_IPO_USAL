@@ -1,19 +1,13 @@
 body {
-  margin: 0;
   font-family: 'N27 Regular' sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-code {
-  font-family: 'N27 Italic';
 }
 
 @font-face {
   font-family: 'N27 Regular';
   font-style: normal;
   font-weight: normal;
-  src: local('N27 Regular'), url('assets/N27-Regular.woff') format('woff');
+  src: local('N27 Regular'), url('assets/N27-Regular.woff') format('woff'), 
+  url('assets/n27-regular-webfont.woff2') format('woff2');
   }
 
 @font-face {
@@ -21,4 +15,4 @@ code {
   font-style: normal;
   font-weight: normal;
   src: local('N27 Regular Italic'), url('assets/N27-RegularItalic.woff') format('woff');
-  }
+}
