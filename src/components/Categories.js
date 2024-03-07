@@ -1,18 +1,16 @@
 import React from 'react';
 import CustomCard from './Card';
-import { Divider } from 'antd';
-import "./Categories.css"
+import { Col, Row,  } from 'antd';
 
-function Categories (){
+const Categories = () =>{
     return(
-    <div>
-        <Divider orientation="left">Prueba</Divider>
-        <div class="flex-container">
-            <CustomCard class="row"></CustomCard>
-            <CustomCard class="row"></CustomCard>
-            <CustomCard class="row"></CustomCard>
-        </div>
-    </div>
+        <Row gutter={[ 16,16 ]}>
+            {Array.from({ length: 4 }).map((_, i) => (
+            <Col key={i} span={6}>
+                <CustomCard></CustomCard>
+            </Col>
+            ))}
+      </Row>
     );
 }
 export default Categories;

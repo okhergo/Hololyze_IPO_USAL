@@ -1,18 +1,13 @@
 body {
-  font-family: 'N27 Regular' sans-serif;
+  font-family: N27 Regular, sans-serif;
 }
 
 @font-face {
   font-family: 'N27 Regular';
   font-style: normal;
   font-weight: normal;
-  src: local('N27 Regular'), url('assets/N27-Regular.woff') format('woff'), 
-  url('assets/n27-regular-webfont.woff2') format('woff2');
+  src: local('N27 Regular'), url('assets/fonts/N27-Regular.woff') format('woff'), 
+  url('assets/fonts/N27-Regular.woff2') format('woff2'),
+  url('assets/fonts/N27-Regular.ttf') format('truetype'),
+  url('assets/fonts/N27-Regular.eot') format('eot');
   }
-
-@font-face {
-  font-family: 'N27 Italic';
-  font-style: normal;
-  font-weight: normal;
-  src: local('N27 Regular Italic'), url('assets/N27-RegularItalic.woff') format('woff');
-}
