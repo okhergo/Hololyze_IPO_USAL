@@ -3,7 +3,7 @@ import { UserOutlined, HomeOutlined, SettingOutlined, InfoCircleOutlined } from 
 import { Layout, Menu } from 'antd';
 import CustomCarousel from './components/Carousel'
 import InputURL from './components/InputURL'
-import Navigation from './components/Navigation';
+import logo from './assets/logo.png'
 
 const { Header, Content, Footer, Sider } = Layout;
 const names = ["Home", "Login", "Preferences", "About us"]
@@ -18,11 +18,11 @@ const items = [HomeOutlined, UserOutlined, SettingOutlined, InfoCircleOutlined].
 const App = () => {
   return (
     <Layout>
-      <Header>
-        <Navigation></Navigation>
+      <Header style={{backgroundColor:'#090082', position:'relative', display:'flex', alignItems:'center', justifyContent:'center'}}>
+        <img src={logo} alt="Logo Hololyze" style={{height:20}}></img>;
       </Header>
       <Layout>
-        <Sider
+        <Sider style={{backgroundColor: 'white'}}
           breakpoint="lg"
           collapsedWidth="0"
           onBreakpoint={(broken) => {
@@ -32,7 +32,7 @@ const App = () => {
             console.log(collapsed, type);
           }}
         >
-          <Menu theme="dark" mode="inline" defaultSelectedKeys={['4']} items={items} />
+          <Menu theme='light' mode="inline" defaultSelectedKeys={['4']} items={items} />
         </Sider>
         <Content style={{ margin: '24px 16px 0', minHeight: "86vh"}}>
           <CustomCarousel></CustomCarousel>
@@ -40,7 +40,7 @@ const App = () => {
           <InputURL></InputURL>
         </Content>
       </Layout>
-      <Footer style={{ textAlign: 'center', background:'black', color:'white'}}>
+      <Footer style={{backgroundColor:'#090082', color:'#ffffff', textAlign: 'center', position: 'sticky'}}>
             Created by Eduardo & Óscar ©{new Date().getFullYear()}
       </Footer>
     </Layout>
