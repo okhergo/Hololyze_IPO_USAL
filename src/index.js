@@ -27,10 +27,10 @@ const items = [HomeOutlined, UserOutlined, SettingOutlined, InfoCircleOutlined].
 function AppLayout() {
   return (
       <>
-        <Header style={{backgroundColor:'#090082', position:'relative', display:'flex', alignItems:'center', justifyContent:'center'}}>
-          <img src={logo} alt="Logo Hololyze" style={{height:20}}></img>;
+        <Header style={{fontFamily: "N27 Regular", backgroundColor:'#090082', position:'relative', display:'flex', alignItems:'center', justifyContent:'center'}}>
+          <img src={logo} alt="Logo Hololyze" style={{height:30}}></img>;
         </Header>
-        <Layout style={{backgroundColor: '#f8f8f8'}} >
+        <Layout style={{fontFamily: "N27 Regular", backgroundColor: '#f8f8f8'}} >
           <Sider style={{backgroundColor: 'white'}}
             breakpoint="lg"
             collapsedWidth="0"
@@ -41,7 +41,7 @@ function AppLayout() {
               console.log(collapsed, type);
             }}
           >
-            <Menu theme='light' mode="inline" defaultSelectedKeys={['4']} items={items} />
+            <Menu style={{fontFamily: "N27 Regular"}} theme='light' mode="inline" defaultSelectedKeys={['4']} items={items} />
           </Sider>
           <Outlet />
         </Layout>

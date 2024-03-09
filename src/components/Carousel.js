@@ -5,7 +5,7 @@ import background from '../assets/Background.png'
 
 function CustomCarousel(){
     return(
-    <Carousel autoplay>
+    <Carousel style={{fontFamily: "N27 Regular"}} autoplay>
         <div class="img-box">
             <img alt="Background" src={background}></img>
             <h2>1. Copia la url de tu producto</h2>
