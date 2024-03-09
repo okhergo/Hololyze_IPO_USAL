@@ -21,7 +21,7 @@ const App = () => {
       <Header style={{backgroundColor:'#090082', position:'relative', display:'flex', alignItems:'center', justifyContent:'center'}}>
         <img src={logo} alt="Logo Hololyze" style={{height:20}}></img>;
       </Header>
-      <Layout>
+      <Layout style={{backgroundColor: '#f8f8f8'}} >
         <Sider style={{backgroundColor: 'white'}}
           breakpoint="lg"
           collapsedWidth="0"
@@ -34,7 +34,7 @@ const App = () => {
         >
           <Menu theme='light' mode="inline" defaultSelectedKeys={['4']} items={items} />
         </Sider>
-        <Content style={{ margin: '24px 16px 0', minHeight: "86vh"}}>
+        <Content style={{margin: '24px 16px 0', minHeight: "86vh"}}>
           <CustomCarousel></CustomCarousel>
           <h2>URL</h2>
           <InputURL></InputURL>
