@@ -1,11 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import { Outlet, RouterProvider, createBrowserRouter } from "react-router-dom";
+import { Outlet, RouterProvider, createBrowserRouter, Link } from "react-router-dom";
 import { UserOutlined, HomeOutlined, SettingOutlined, InfoCircleOutlined } from '@ant-design/icons';
 
 import './index.css';
 import Home from './routes/Home';
 import About from './routes/About';
+import Login from './routes/Login';
 import ErrorPage from './routes/ErrorPage';
 import reportWebVitals from './reportWebVitals';
 import { Layout, Menu } from 'antd';
@@ -19,8 +20,7 @@ const items = [HomeOutlined, UserOutlined, SettingOutlined, InfoCircleOutlined].
   (icon, index) => ({
     key: String(index + 1),
     icon: React.createElement(icon),
-    label: `${names[index]}`,
-    href: `${routes[index]}`,
+    label: <Link to={routes[index]}>{names[index]}</Link>,
   }),
 );
 
@@ -64,6 +64,10 @@ const router = createBrowserRouter([
       {
         path: '/about',
         element: <About />
+      },
+      {
+        path: '/login',
+        element: <Login />
       },
     ]
   }
