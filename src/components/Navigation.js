@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import { AppstoreOutlined, MailOutlined, SettingOutlined } from '@ant-design/icons';
+//import { AppstoreOutlined, MailOutlined, SettingOutlined } from '@ant-design/icons';
 import { Menu } from 'antd';
-const items = [
+/*const items = [
   {
     label: 'Navigation One',
     key: 'mail',
@@ -56,13 +56,13 @@ const items = [
     ),
     key: 'alipay',
   },
-];
+];*/
 const Navigation = () => {
   const [current, setCurrent] = useState('mail');
   const onClick = (e) => {
     console.log('click ', e);
     setCurrent(e.key);
   };
-  return <Menu theme="dark" onClick={onClick} selectedKeys={[current]} mode="horizontal" items={items} />;
+  return <Menu theme="dark" onClick={onClick} selectedKeys={[current]} mode="horizontal"/>;
 };
 export default Navigation;

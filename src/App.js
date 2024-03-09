@@ -1,16 +1,17 @@
 import React from 'react';
-import { UploadOutlined, UserOutlined, VideoCameraOutlined } from '@ant-design/icons';
+import { UserOutlined, HomeOutlined, SettingOutlined, InfoCircleOutlined } from '@ant-design/icons';
 import { Layout, Menu } from 'antd';
 import CustomCarousel from './components/Carousel'
-import Categories from './components/Categories'
+import InputURL from './components/InputURL'
 import Navigation from './components/Navigation';
 
 const { Header, Content, Footer, Sider } = Layout;
-const items = [UserOutlined, VideoCameraOutlined, UploadOutlined, UserOutlined].map(
+const names = ["Home", "Login", "Preferences", "About us"]
+const items = [HomeOutlined, UserOutlined, SettingOutlined, InfoCircleOutlined].map(
   (icon, index) => ({
     key: String(index + 1),
     icon: React.createElement(icon),
-    label: `nav ${index + 1}`,
+    label: `${names[index]}`,
   }),
 );
 
@@ -33,16 +34,15 @@ const App = () => {
         >
           <Menu theme="dark" mode="inline" defaultSelectedKeys={['4']} items={items} />
         </Sider>
-        <Layout>
-          <Content style={{ margin: '24px 16px 0' }}>
-            <CustomCarousel></CustomCarousel>
-            <Categories></Categories>
-          </Content>
-          <Footer style={{ textAlign: 'center' }}>
-            Created by Eduardo & Óscar ©{new Date().getFullYear()}
-          </Footer>
-        </Layout>
+        <Content style={{ margin: '24px 16px 0', minHeight: "86vh"}}>
+          <CustomCarousel></CustomCarousel>
+          <h2>URL</h2>
+          <InputURL></InputURL>
+        </Content>
       </Layout>
+      <Footer style={{ textAlign: 'center', background:'black', color:'white'}}>
+            Created by Eduardo & Óscar ©{new Date().getFullYear()}
+      </Footer>
     </Layout>
   );
 };
