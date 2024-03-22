@@ -35,7 +35,6 @@ function LoginForm(){
             message: 'Please input your username!',
             },
         ]}
-        style={{fontFamily:"N27 Regular"}} 
         >
         <Input />
         </Form.Item>
@@ -61,7 +60,7 @@ function LoginForm(){
             span: 16,
         }}
         >
-        <Checkbox style={{fontFamily:"N27 Regular"}} >Remember me</Checkbox>
+        <Checkbox>Remember me</Checkbox>
         </Form.Item>
 
         <Form.Item
@@ -70,7 +69,7 @@ function LoginForm(){
             span: 16,
         }}
         >
-        <Button style={{fontFamily:"N27 Regular"}} type="primary" htmlType="submit">
+        <Button type="primary" htmlType="submit">
             Submit
         </Button>
         </Form.Item>

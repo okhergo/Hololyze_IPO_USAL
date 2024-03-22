@@ -6,7 +6,7 @@ const { Content } = Layout;
 
 const Home = () => {
   return (
-    <Content style={{fontFamily: "N27 Regular", margin: '24px 16px 0', minHeight: "86vh"}}>
+    <Content style={{margin: '24px 16px 0', minHeight: "86vh"}}>
       <LoginForm></LoginForm>
     </Content>
   );

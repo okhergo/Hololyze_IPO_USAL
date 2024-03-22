@@ -32,7 +32,7 @@ const App = () => {
             console.log(collapsed, type);
           }}
         >
-          <Menu theme='light' mode="inline" defaultSelectedKeys={['4']} items={items} />
+          <Menu theme='light' mode="inline" items={items} />
         </Sider>
         <Content style={{margin: '24px 16px 0', minHeight: "86vh"}}>
           <CustomCarousel></CustomCarousel>
