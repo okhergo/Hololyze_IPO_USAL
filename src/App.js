@@ -1,49 +1,44 @@
-import React from 'react';
-import { UserOutlined, HomeOutlined, SettingOutlined, InfoCircleOutlined } from '@ant-design/icons';
-import { Layout, Menu } from 'antd';
-import CustomCarousel from './components/Carousel'
-import InputURL from './components/InputURL'
+import React from 'react'
+
+import { UserOutlined, HomeOutlined, SettingOutlined, InfoCircleOutlined } from '@ant-design/icons'
+import { Outlet, Link } from "react-router-dom"
+import { Layout, Menu } from 'antd'
 import logo from './assets/logo.png'
 
-const { Header, Content, Footer, Sider } = Layout;
+const { Header, Footer, Sider } = Layout
+
 const names = ["Home", "Login", "Preferences", "About us"]
+const routes = ["/", "/login", "/preferences", "/about"]
 const items = [HomeOutlined, UserOutlined, SettingOutlined, InfoCircleOutlined].map(
   (icon, index) => ({
     key: String(index + 1),
     icon: React.createElement(icon),
-    label: `${names[index]}`,
+    label: <Link to={routes[index]}>{names[index]}</Link>,
   }),
-);
+)
 
-const App = () => {
+function AppLayout() {
   return (
-    <Layout>
-      <Header style={{backgroundColor:'#090082', position:'relative', display:'flex', alignItems:'center', justifyContent:'center'}}>
-        <img src={logo} alt="Logo Hololyze" style={{height:20}}></img>;
-      </Header>
-      <Layout style={{backgroundColor: '#f8f8f8'}} >
-        <Sider style={{backgroundColor: 'white'}}
-          breakpoint="lg"
-          collapsedWidth="0"
-          onBreakpoint={(broken) => {
-            console.log(broken);
-          }}
-          onCollapse={(collapsed, type) => {
-            console.log(collapsed, type);
-          }}
-        >
-          <Menu theme='light' mode="inline" items={items} />
-        </Sider>
-        <Content style={{margin: '24px 16px 0', minHeight: "86vh"}}>
-          <CustomCarousel></CustomCarousel>
-          <h2>URL</h2>
-          <InputURL></InputURL>
-        </Content>
-      </Layout>
-      <Footer style={{backgroundColor:'#090082', color:'#ffffff', textAlign: 'center', position: 'sticky'}}>
+    <Layout className="Container">
+        <Header className="Header">
+            <img src={logo} alt="Logo Hololyze" style={{height:30}}></img>
+        </Header>
+        <Layout className="Container">
+            <Sider className="Sidebar" breakpoint="lg" collapsedWidth="0"
+                onBreakpoint={(broken) => {
+                    console.log(broken);
+                }}
+                onCollapse={(collapsed, type) => {
+                    console.log(collapsed, type);
+                }}>
+                <Menu theme='dark' mode="inline" items={items} />
+            </Sider>
+            <Outlet />
+        </Layout>
+        <Footer className="Footer">
             Created by Eduardo & Óscar ©{new Date().getFullYear()}
-      </Footer>
+        </Footer>
     </Layout>
-  );
-};
-export default App;
+  )
+}
+export default AppLayout

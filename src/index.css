@@ -1,5 +1,114 @@
 * {
   font-family: 'N27 Regular', sans-serif !important;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+label {
+  font-size: 16px!important;
+}
+
+.Button {
+  margin: 5px 0;
+  background-color: #2cbeb7;
+  border: #2cbeb7;
+}
+
+.Input {
+  margin: 5px 0;
+}
+
+.Span {
+  text-decoration: underline;
+}
+
+.Header {
+  background-color: #001e5f;
+  color: #f9fafd;
+  font-size: 24px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.Footer {
+  background-color: #001e5f;
+  color: #f9fafd;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.Content {
+  font-size: 24px;
+  padding: 1vh;
+  font-weight: bold;
+  background-color: #f9fafd;
+  color: #000a2e;
+}
+
+.ant-typography {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.ant-layout-sider-children {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.Sidebar {
+  background-color: #000a2e;
+  color: #f9fafd;
+}
+
+.Container {
+  min-height: 90vh;
+}
+
+.Image {
+ height: 600px;
+}
+
+
+.Grid {
+  display: flex;
+  justify-content: center;
+  height: 100%;
+}
+
+.col-1 {
+  background-color: #f9fafd;
+  color: #000a2e;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+.col-2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #fff;
+}
+
+.col-2 > .col-2-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  margin: 0 auto;
+  width: 70%;
 }
 
 @font-face {

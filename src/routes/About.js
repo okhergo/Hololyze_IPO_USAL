@@ -1,12 +1,12 @@
-import React from 'react';
-import { Layout } from 'antd';
+import React from 'react'
+import { Layout } from 'antd'
 import logo from '../assets/logo_azul.png'
 
-const { Content } = Layout;
+const { Content } = Layout
 
 const About = () => {
   return (
-    <Content style={{margin: '24px 16px 0', minHeight: "86vh"}}>
+    <Content className='Content'>
         <h1>About us</h1>
         <h2>Descripción</h2>
         <p>Hololyze es un proyecto de la asignatura Interacción Persona-Ordenador. Se trata de una aplicación que permite probar productos online antes de comprarlos por medio de la ultimísima tecnología en hologramas.</p>
@@ -33,6 +33,6 @@ const About = () => {
         <h2>Equipo de trabajo</h2>
         <p>Este grupo está formado por Eduardo Juanes Ramos y Óscar Hernández Gómez de tercero del Grado en Ingeniería Informática del grupo PA2, impartido por Luis Augusto Silva (Dios) los viernes en el horario de 10:00 a 13:00 de la mañana en el Aula de Informática 6 de la Facultad de Ciencias en el edificio de La Merced.</p>
     </Content>
-  );
-};
-export default About;
+  )
+}
+export default About
