@@ -37,7 +37,7 @@ const InputURL = () => {
       </Form.Item>
       <Form.Item>
         <Space>
-          <Button style={{ backgroundColor: "#ffa200" }} type="primary" htmlType="submit">
+          <Button className='Button' type="primary" htmlType="submit">
             HOLOGRAPH IT!
           </Button>
         </Space>

@@ -17,8 +17,8 @@ label {
 
 .Button {
   margin: 5px 0;
-  background-color: #2cbeb7;
-  border: #2cbeb7;
+  background-color: #ffb400;
+  border: #ffb400;
 }
 
 .Input {
@@ -55,14 +55,12 @@ label {
   color: #000a2e;
 }
 
-.ant-typography {
-  font-size: 20px;
-  font-weight: bold;
-}
-
 .ant-layout-sider-children {
-  font-size: 24px;
-  font-weight: bold;
+  background-color: #000a2e;
+  color: #f9fafd;
+}
+.ant-menu-item-selected {
+  background-color: #003caa !important;
 }
 
 .Sidebar {
@@ -109,6 +107,16 @@ label {
   text-align: center;
   margin: 0 auto;
   width: 70%;
+}
+
+h1{
+  color:#ffb400;
+}
+h2{
+  color:#003caa;
+}
+p{
+  font-weight: lighter;
 }
 
 @font-face {

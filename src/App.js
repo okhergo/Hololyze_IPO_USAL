@@ -31,7 +31,7 @@ function AppLayout() {
                 onCollapse={(collapsed, type) => {
                     console.log(collapsed, type);
                 }}>
-                <Menu theme='dark' mode="inline" items={items} />
+                <Menu className="Sidebar" theme='dark' mode="inline" items={items} />
             </Sider>
             <Outlet />
         </Layout>
