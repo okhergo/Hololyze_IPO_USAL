@@ -21,7 +21,7 @@ function AppLayout() {
   return (
     <Layout className="Container">
         <Header className="Header">
-            <img src={logo} alt="Logo Hololyze" style={{height:30}}></img>
+            <img src={logo} alt="Logo Hololyze"></img>
         </Header>
         <Layout className="Container">
             <Sider className="Sidebar" breakpoint="lg" collapsedWidth="0"

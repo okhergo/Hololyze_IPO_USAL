@@ -38,6 +38,11 @@ label {
   align-items: center;
   justify-content: center;
 }
+.Header img {
+    width: 400px;
+    height: auto;
+    border-radius: 15px;
+}
 
 .Footer {
   background-color: #001e5f;
@@ -111,13 +116,97 @@ label {
 
 h1{
   color:#ffb400;
+  margin: 20px 0px 5px 0px;
 }
 h2{
   color:#003caa;
+  margin: 20px 0px 5px 0px;
 }
 p{
   font-weight: lighter;
+  margin: 5px 0px 10px 0px;
 }
+
+.PrimaryBlue{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  background-color: #001e5f;
+  border: 2px solid #000a2e;
+  color: #f9fafd;
+  height: 20vh;
+  border-radius: 10px;
+}
+
+.PrimaryOrange{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  background-color: #ffb400;
+  border: 2px solid #000a2e;
+  height: 20vh;
+  border-radius: 10px;
+}
+
+.DarkBlue{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  background-color: #000a2e;
+  border: 2px solid #000a2e;
+  color: #f9fafd;
+  height: 20vh;
+  border-radius: 10px;
+}
+
+.AccentBlue{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  background-color: #003caa;
+  border: 2px solid #000a2e;
+  color: #f9fafd;
+  height: 20vh;
+  border-radius: 10px;
+}
+
+.White{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  background-color: #f9fafd;
+  border: 2px solid #000a2e;
+  height: 20vh;
+  border-radius: 10px;
+}
+
+.img-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 25vw;
+  position: relative;
+  }
+  
+  .img-box img {
+      width: 100%;
+      height: auto;
+      border-radius: 15px;
+  }
+  
+  .img-box h2 {
+      position: absolute;
+      color: #f9fafd;
+      top: 10%;
+      left: 10%;
+      text-align: left;
+      font-size: 30px;
+  }
 
 @font-face {
   font-family: 'N27 Regular';
