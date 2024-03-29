@@ -54,9 +54,16 @@ label {
   justify-content: center;
 }
 
+.Login {
+  font-size: 24px;
+  font-weight: bold;
+  background-color: #f9fafd;
+  color: #000a2e;
+}
+
 .Content {
   font-size: 24px;
-  padding: 1vh;
+  padding: 2vh;
   font-weight: bold;
   background-color: #f9fafd;
   color: #000a2e;
@@ -73,6 +80,7 @@ label {
 .Sidebar {
   background-color: #000a2e;
   color: #f9fafd;
+  padding: 5px;
 }
 
 .Container {
@@ -91,13 +99,37 @@ label {
 }
 
 .col-1 {
-  background-color: #f9fafd;
+  background-color: #000a2e;
   color: #000a2e;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   height: 100%;
+}
+
+.wrapper {
+  position: relative; 
+  height: 100%;
+  width: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url('https://img.freepik.com/vector-gratis/vector-fondo-textura-holografica_53876-140765.jpg?t=st=1711753760~exp=1711757360~hmac=1538c45d9443f65d8619a4472f1e84e7795090be4f925c79eab2a4257d867fe9&w=826');
+  background-size: cover;
+}
+.wrapper::before{
+  content:"";
+  position: absolute;
+  inset: 0;
+  background-color: #000a2e;
+  opacity: 0.8;
+}
+.wrapper img{
+  position: relative;
+  font-size: 14rem;
+  line-height: 0.9;
+  text-align: center;
 }
 
 .col-2 {
@@ -175,21 +207,25 @@ h4{
   justify-content: center;
   height: 25vw;
   position: relative;
+  background-image: url('https://img.freepik.com/vector-gratis/fondo-efecto-holografico-abstracto_1048-7861.jpg?t=st=1711753453~exp=1711757053~hmac=6f6893ce9a84f071c4ce8c356c9dabfa048e30beca080d97dce7e75f82d59fa0&w=996');
+  background-size: cover;
+  border-radius: 15px;
   }
-  
-  .img-box img {
-      width: 100%;
-      height: auto;
-      border-radius: 15px;
+  .img-box::before {
+    content:"";
+    position: absolute;
+    inset: 0;
+    background-color: #000a2e;
+    opacity: 0.6;
+    border-radius: 15px;
   }
-  
   .img-box h2 {
-      position: absolute;
-      color: #f9fafd;
-      top: 10%;
-      left: 10%;
-      text-align: left;
-      font-size: 30px;
+    position: absolute;
+    color: #f9fafd;
+    top: 10%;
+    left: 10%;
+    text-align: left;
+    font-size: 40px;
   }
 
 @font-face {
