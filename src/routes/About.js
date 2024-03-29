@@ -57,7 +57,7 @@ const colors = [
   {name: "UCLA Gold", color: "#000a2e", hex: "#ffb400", size:6},
   {name: "Cool Black", color: "#f9fafd", hex: "#001e5f", size:6},
   {name: "Navy Blue", color: "#f9fafd", hex: "#003caa", size:4},
-  {name: "Catacean Blue", color: "#f9fafd", hex: "#000a2e", size:4},
+  {name: "Cetacean Blue", color: "#f9fafd", hex: "#000a2e", size:4},
   {name: "Ghost White", color: "#000a2e", hex: "#f9fafd", size:4},
 ]
 
@@ -66,13 +66,41 @@ const About = () => {
     <Content className='Content'>
         <h1>About us</h1>
         <h2>DESCRIPCIÓN</h2>
-        <p>Hololyze es un proyecto de la asignatura Interacción Persona-Ordenador. Se trata de una aplicación que permite probar productos online antes de comprarlos por medio de la ultimísima tecnología en hologramas.</p>
+        <p>Hololyze es un proyecto de la asignatura Interacción Persona-Ordenador. Se trata de una aplicación
+           web que busca mejorar el proceso de compra online, permitiendo probar los productos antes de
+           comprarlos por medio de la ultimísima tecnología en hologramas.</p>
+        <p>¿Sabías que Amazon tiene un total de 18.000 pedidos al día en España? De estos, 1 de cada 5 se 
+           devuelven mientras que en las tiendas esta cifra se reduce a un 9%.</p>
+        <p>Con HOLOLYZE podrás probar los productos antes de comprarlos. Una innovadora tecnología por holograma
+           a través del que podrás probar y visualizar el producto, incentivando la compra online y todos sus
+           beneficios de la comodidad de comprar sin necesidad de salir de casa.</p>
+        <h4>Hololyze: Holograph it!</h4>
         <h2>IDENTIDAD VISUAL</h2>
         <h3>Introducción</h3>
-        <p>Presentamos la identidad visual de Hololyze, que une los conceptos de la holografía y la paquetería, que definen los 3 pilares principales de este proyecto: el uso de hologramas para probar los productos antes de comprarlos, ahorrando tiempo y cuidando el medio ambiente con el ahorro de devoluciones.</p>
+        <p>Presentamos la identidad visual de Hololyze, que pretende representar los valores de la marca, 
+           uniendo los conceptos de la holografía y la paquetería, que definen los 3 pilares principales de
+           este proyecto: 
+           <h4>PRUEBA DE PRODUCTOS</h4>
+           Facilita la decisión de compra con el uso de sofisticados hologramas.
+           <h4>AHORRO DE TIEMPO</h4>
+           Al evitar comprar productos que no deseabas y papeleo innecesario.
+           <h4>ECO-FRIENDLY</h4>
+           Cuida el medio ambiente reduciendo los transportes por devoluciones.</p>
         <h3>Colores</h3>
-        <p>Seleccionamos una amplia paleta de color compuesta por una escala de azules, que conecta con el mundo de la tecnología y en especial de la holografía por su aparición en películas, acompañado de un naranja como color de resalte, que une con el concepto de las cajas y los paquetes.</p>
-        <Row gutter={[ 12 ]}>
+        <p>Nuestra paleta de color cuenta con nuestros dos colores principales: UCLA Gold y Cool Black.
+           <h4>COOL BLACK #001e5f</h4>
+           Cool Black es un color azulado, que transmite profesionalismo, estabilidad y garantía, tal como 
+           nuestro producto. Además, conecta con el mundo de la tecnología y en especial de la holografía por
+           su aparición en películas. 
+           <h4>UCLA GOLD #ffb400</h4>
+           Por su parte el UCLA Gold, que une con el concepto de las cajas y los paquetes, transmite experiencia,
+           seguridad y confiabilidad, como se asocia a las principales empresas de transporte y entidades financieras.
+           <h4>Complementarios</h4>
+           En adición, sumamos un Navy Blue como color de resalte, que completa la paleta cromática junto con el Negro
+           Cetacean Blue y el blanco Ghost White. Dos tonos con un ligero virado a azul, que favorecen su presentación y
+           visibilidad en medios digitales, en lugar de los colores puros.</p>
+          <br/>
+          <Row gutter={[ 12 ]}>
           {Array.from({ length: 5 }).map((_, i) => (
           <Col key={i} span={colors[i].size}>
             <div className='Color' style={{color:colors[i].color, background:colors[i].hex}}>
@@ -84,12 +112,16 @@ const About = () => {
         </Row>
         <br/>
         <h3>Tipografía</h3>
-        <p>Como tipografía nos decantamos por la familia N27, una tipografía sin serifa que transmite un aspecto tecnológico pero que tiene muy buena legibilidad y transmite un punto de seriedad y modernidad</p>
+        <p>La familia tipografíca N27, de la fundición Atipo, es la elegida para representar a Hololyze.
+           Una tipografía neogrotesca de corte rectangular sin serifa, que cuenta con un alto contraste
+           en la unión de los vertices, convirtiéndola en una fuente con mucha personalidad pero sin perjudicar
+           su gran legibilidad. Transmite un aspecto tecnológico y moderno, manteniendo una claridad que la
+           hacen ideal para diseño web y editorial. Perfecta para transmitir los valores de marca de Hololyze.</p>
         <p className='tipography'>Aa</p>
         <h4>N27 REGULAR</h4>
-        <p>A B C D E F G H Y J K L M N Ñ O P Q R S T U V W X Y Z</p>
-        <p>a b c d e f g h y j k l m n ñ o p q r s t u v w x y z</p>
-        <p>1 2 3 4 5 6 7 8 9 0 . : , ; - ( )</p>
+        <p>A B C D E F G H Y J K L M N Ñ O P Q R S T U V W X Y Z
+           a b c d e f g h y j k l m n ñ o p q r s t u v w x y z
+           1 2 3 4 5 6 7 8 9 0 . : , ; - ( )</p>
         <h3>Logo</h3>
         <p>El logo es una abstración que representa la esencia de este proyecto, con un símbolo minimalista que se adapta a la perfección a las nuevas tecnologías y su presentación en medios digitales. El logo representa la típica representación holográfica de las películas, al mismo tiempo que simboliza los extremos plegables de un paquete y utiliza la misma forma de la letra 'Y', la cual es la más representativa de nuestra tipografía N27.</p>
         <h4>VERSIÓN VERTICAL</h4>
@@ -130,7 +162,10 @@ const About = () => {
         <h2>MOCKUPS</h2>
         <p>En proceso...</p>
         <h2>EQUIPO DE TRABAJO</h2>
-        <p>Este grupo está formado por Eduardo Juanes Ramos y Óscar Hernández Gómez de tercero del Grado en Ingeniería Informática del grupo PA2, impartido por Luis Augusto Silva (Dios) los viernes en el horario de 10:00 a 13:00 de la mañana en el Aula de Informática 6 de la Facultad de Ciencias en el edificio de La Merced.</p>
+        <p>Este grupo está formado por Eduardo Juanes Ramos y Óscar Hernández Gómez de tercero del 
+           Grado en Ingeniería Informática del grupo PA2, impartido por Luis Augusto Silva los
+           viernes en el horario de 10:00 a 13:00 de la mañana en el Aula de Informática 6 de la
+           Facultad de Ciencias en el edificio de La Merced.</p>
     </Content>
   )
 }
