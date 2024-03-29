@@ -12,13 +12,15 @@ form {
 }
 
 label {
-  font-size: 16px!important;
+  font-size: 16px !important;
 }
 
 .Button {
   margin: 5px 0;
   background-color: #ffb400;
   border: #ffb400;
+  font-size: 25px;
+  height: 50px;
 }
 
 .Input {
@@ -127,63 +129,44 @@ p{
   margin: 5px 0px 10px 0px;
 }
 
-.PrimaryBlue{
+.Color{
   display: flex;
   flex-direction: column;
   justify-content: center;
   text-align: center;
-  background-color: #001e5f;
-  border: 2px solid #000a2e;
-  color: #f9fafd;
-  height: 20vh;
-  border-radius: 10px;
-}
-
-.PrimaryOrange{
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  text-align: center;
-  background-color: #ffb400;
   border: 2px solid #000a2e;
   height: 20vh;
   border-radius: 10px;
 }
 
-.DarkBlue{
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  text-align: center;
-  background-color: #000a2e;
-  border: 2px solid #000a2e;
-  color: #f9fafd;
-  height: 20vh;
-  border-radius: 10px;
+h3{
+  font-size: 25px;
 }
 
-.AccentBlue{
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  text-align: center;
-  background-color: #003caa;
-  border: 2px solid #000a2e;
-  color: #f9fafd;
-  height: 20vh;
-  border-radius: 10px;
+h4{
+  font-weight: normal;
+  color:#003caa;
 }
 
-.White{
+.tipography{
+  font-size: 20vh;
+  margin: -50px 0px -50px 0px;
+}
+
+.logo-box {
   display: flex;
   flex-direction: column;
   justify-content: center;
   text-align: center;
-  background-color: #f9fafd;
   border: 2px solid #000a2e;
-  height: 20vh;
   border-radius: 10px;
-}
+  position: relative;
+  }
+  .logo-box img {
+    width: 100%;
+    height: auto;
+    padding: 5%;
+  }
 
 .img-box {
   display: flex;
