@@ -45,10 +45,6 @@ label {
   font-size: large;
 }
 
-.Span {
-  text-decoration: underline;
-}
-
 .Header {
   background-color: #001e5f;
   color: #f9fafd;
@@ -112,10 +108,17 @@ label {
   min-height: 90vh;
 }
 
-.Image {
- height: 600px;
+.ContentLayout{
+  max-width: 90rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
+.Image {
+ width: 100%;
+ padding: 1rem;
+}
 
 .Grid {
   display: flex;

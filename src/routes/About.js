@@ -24,6 +24,10 @@ import S_Blanco from "../assets/logo/Simbolo/Blanco.webp"
 import S_Naranja from "../assets/logo/Simbolo/Naranja.webp"
 import S_Azul from "../assets/logo/Simbolo/Azul.webp"
 
+import logo_construccion from '../assets/logo_construccion.webp'
+import logo_componentes from '../assets/logo_componentes.png'
+import logo_tagline from '../assets/logo/logo_tagline.webp'
+
 const { Content } = Layout
 
 const logo_vertical = [
@@ -63,6 +67,7 @@ const colors = [
 
 const About = () => {
   return (
+    <Layout className='ContentLayout'>
     <Content className='Content'>
         <h1>About us</h1>
         <h2>DESCRIPCIÓN</h2>
@@ -123,7 +128,19 @@ const About = () => {
            a b c d e f g h y j k l m n ñ o p q r s t u v w x y z
            1 2 3 4 5 6 7 8 9 0 . : , ; - ( )</p>
         <h3>Logo</h3>
-        <p>El logo es una abstración que representa la esencia de este proyecto, con un símbolo minimalista que se adapta a la perfección a las nuevas tecnologías y su presentación en medios digitales. El logo representa la típica representación holográfica de las películas, al mismo tiempo que simboliza los extremos plegables de un paquete y utiliza la misma forma de la letra 'Y', la cual es la más representativa de nuestra tipografía N27.</p>
+        <p>El logo de Hololyze surge de la abstración de tres elementos clave que caracterizan la marca:
+           holograma, paquetes y la letra más característica de nuestra tipografía N27, la 'Y'. Así se construye
+           un símbolo minimalista, que representa la esencia del proyecto y se adapta a la perfección a su
+           presentación en medios digitales.
+           <img className='Image' src={logo_componentes} alt="Componentes del logo de Hololyze"/>
+           <h4>CONSTRUCCIÓN</h4>
+           Su construcción se ha conseguido mediante una rejilla como se muestra, que iguala la altura de símbolo
+           y logotipo, al que se le aplica un cierto desnivel en las letras de los extremos para continuar el concepto. 
+           <img className='Image' src={logo_construccion} alt="Construcción del logo de Hololyze"/>
+           <h4>TAGLINE</h4>
+           Presentamos el logo de Hololyze en su versión con tagline: "Holograph it!", holografíalo.
+           <img className='Image' src={logo_tagline} alt="Logo de Hololyze con tagline"/>        
+        </p>
         <h4>VERSIÓN VERTICAL</h4>
         <p>Versiones del logo en formato vertical unicolor y full color</p>
         <Row gutter={[ 12,12 ]}>
@@ -167,6 +184,7 @@ const About = () => {
            viernes en el horario de 10:00 a 13:00 de la mañana en el Aula de Informática 6 de la
            Facultad de Ciencias en el edificio de La Merced.</p>
     </Content>
+    </Layout>
   )
 }
 export default About
