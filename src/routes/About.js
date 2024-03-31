@@ -83,7 +83,7 @@ const About = () => {
            <h4>PRUEBA DE PRODUCTOS</h4>
            Facilita la decisión de compra con el uso de sofisticados hologramas.
            <h4>AHORRO DE TIEMPO</h4>
-           Al evitar comprar productos que no deseabas y papeleo innecesario.
+           Evita comprar productos que no deseabas y papeleo innecesario.
            <h4>ECO-FRIENDLY</h4>
            Cuida el medio ambiente reduciendo los transportes por devoluciones.</p>
         <h3>Colores</h3>
@@ -91,12 +91,12 @@ const About = () => {
            <h4>COOL BLACK #001e5f</h4>
            Cool Black es un color azulado, que transmite profesionalismo, estabilidad y garantía, tal como 
            nuestro producto. Además, conecta con el mundo de la tecnología y en especial de la holografía por
-           su aparición en películas. 
+           su aparición en películas de esta manera. 
            <h4>UCLA GOLD #ffb400</h4>
            Por su parte el UCLA Gold, que une con el concepto de las cajas y los paquetes, transmite experiencia,
            seguridad y confiabilidad, como se asocia a las principales empresas de transporte y entidades financieras.
            <h4>Complementarios</h4>
-           En adición, sumamos un Navy Blue como color de resalte, que completa la paleta cromática junto con el Negro
+           En adición, sumamos un Navy Blue como color de resalte, que completa la paleta cromática junto con el negro
            Cetacean Blue y el blanco Ghost White. Dos tonos con un ligero virado a azul, que favorecen su presentación y
            visibilidad en medios digitales, en lugar de los colores puros.</p>
           <br/>

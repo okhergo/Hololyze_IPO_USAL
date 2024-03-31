@@ -1,14 +1,16 @@
-import React from 'react';
-import { Button, Form, Input, message, Space } from 'antd';
+import React from 'react'
+import { Button, Form, Input, message, Space } from 'antd'
+
+import logo from '../assets/logo/Simbolo/Azul.webp'
 
 const InputURL = () => {
-  const [form] = Form.useForm();
+  const [form] = Form.useForm()
   const onFinish = () => {
-    message.success('Submit success!');
-  };
+    message.success('Submit success!')
+  }
   const onFinishFailed = () => {
-    message.error('Submit failed!');
-  };
+    message.error('Submit failed!')
+  }
 
   return (
     <Form
@@ -33,12 +35,13 @@ const InputURL = () => {
           },
         ]}
       >
-        <Input placeholder="Input URL" />
+        <Input className='Input' placeholder="Input URL" />
       </Form.Item>
       <Form.Item>
         <Space>
           <Button className='Button' type="primary" htmlType="submit">
-            HOLOGRAPH IT!
+            <img src={logo} alt="Holograph it!"/>
+            <h2 id='h2'>Holograph it!</h2>
           </Button>
         </Space>
       </Form.Item>
