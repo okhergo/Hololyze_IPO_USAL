@@ -75,7 +75,7 @@ const About = () => {
            web que busca mejorar el proceso de compra online, permitiendo probar los productos antes de
            comprarlos por medio de la ultimísima tecnología en hologramas.</p>
         <p>¿Sabías que Amazon tiene un total de 18.000 pedidos al día en España? De estos, 1 de cada 5 se 
-           devuelven mientras que en las tiendas esta cifra se reduce a un 9%.</p>
+           devuelven, mientras que en las tiendas esta cifra se reduce a un 9%.</p>
         <p>Con HOLOLYZE podrás probar los productos antes de comprarlos. Una innovadora tecnología por holograma
            a través del que podrás probar y visualizar el producto, incentivando la compra online y todos sus
            beneficios de la comodidad de comprar sin necesidad de salir de casa.</p>
@@ -84,24 +84,24 @@ const About = () => {
         <h3>Introducción</h3>
         <p>Presentamos la identidad visual de Hololyze, que pretende representar los valores de la marca, 
            uniendo los conceptos de la holografía y la paquetería, que definen los 3 pilares principales de
-           este proyecto: 
-           <h4>PRUEBA DE PRODUCTOS</h4>
-           Facilita la decisión de compra con el uso de sofisticados hologramas.
-           <h4>AHORRO DE TIEMPO</h4>
-           Evita comprar productos que no deseabas y papeleo innecesario.
-           <h4>ECO-FRIENDLY</h4>
-           Cuida el medio ambiente reduciendo los transportes por devoluciones.</p>
+           este proyecto: </p>
+        <h4>PRUEBA DE PRODUCTOS</h4>
+        <p>Facilita la decisión de compra con el uso de sofisticados hologramas.</p>
+        <h4>AHORRO DE TIEMPO</h4>
+        <p>Evita comprar productos que no deseabas y papeleo innecesario.</p>
+        <h4>ECO-FRIENDLY</h4>
+        <p>Cuida el medio ambiente reduciendo los transportes por devoluciones.</p>
         <h3>Colores</h3>
-        <p>Nuestra paleta de color cuenta con nuestros dos colores principales: UCLA Gold y Cool Black.
-           <h4>COOL BLACK #001e5f</h4>
-           Cool Black es un color azulado, que transmite profesionalismo, estabilidad y garantía, tal como 
+        <p>Nuestra paleta de color cuenta con nuestros dos colores principales: UCLA Gold y Cool Black.</p>
+        <h4>COOL BLACK #001e5f</h4>
+        <p>Cool Black es un color azulado, que transmite profesionalismo, estabilidad y garantía, tal como 
            nuestro producto. Además, conecta con el mundo de la tecnología y en especial de la holografía por
-           su aparición en películas de esta manera. 
-           <h4>UCLA GOLD #ffb400</h4>
-           Por su parte el UCLA Gold, que une con el concepto de las cajas y los paquetes, transmite experiencia,
-           seguridad y confiabilidad, como se asocia a las principales empresas de transporte y entidades financieras.
-           <h4>Complementarios</h4>
-           En adición, sumamos un Navy Blue como color de resalte, que completa la paleta cromática junto con el negro
+           su aparición en películas de esta manera.</p>
+        <h4>UCLA GOLD #ffb400</h4>
+        <p>Por su parte el UCLA Gold, que une con el concepto de las cajas y los paquetes, transmite experiencia,
+           seguridad y confiabilidad, como se asocia a las principales empresas de transporte y entidades financieras.</p>
+        <h4>Complementarios</h4>
+        <p>En adición, sumamos un Navy Blue como color de resalte, que completa la paleta cromática junto con el negro
            Cetacean Blue y el blanco Ghost White. Dos tonos con un ligero virado a azul, que favorecen su presentación y
            visibilidad en medios digitales, en lugar de los colores puros.</p>
           <br/>
@@ -124,26 +124,26 @@ const About = () => {
            hacen ideal para diseño web y editorial. Perfecta para transmitir los valores de marca de Hololyze.</p>
         <p className='tipography'>Aa</p>
         <h4>N27 REGULAR</h4>
-        <p>A B C D E F G H Y J K L M N Ñ O P Q R S T U V W X Y Z
-           a b c d e f g h y j k l m n ñ o p q r s t u v w x y z
+        <p>A B C D E F G H Y J K L M N Ñ O P Q R S T U V W X Y Z<br/>
+           a b c d e f g h y j k l m n ñ o p q r s t u v w x y z<br/>
            1 2 3 4 5 6 7 8 9 0 . : , ; - ( )</p>
         <h3>Logo</h3>
         <p>El logo de Hololyze surge de la abstración de tres elementos clave que caracterizan la marca:
            holograma, paquetes y la letra más característica de nuestra tipografía N27, la 'Y'. Así se construye
            un símbolo minimalista, que representa la esencia del proyecto y se adapta a la perfección a su
-           presentación en medios digitales.
-           <img className='Image' src={logo_componentes} alt="Componentes del logo de Hololyze"/>
-           <h4>CONSTRUCCIÓN</h4>
-           Su construcción se ha conseguido mediante una rejilla como se muestra, que iguala la altura de símbolo
-           y logotipo, al que se le aplica un cierto desnivel en las letras de los extremos para continuar el concepto. 
-           <img className='Image' src={logo_construccion} alt="Construcción del logo de Hololyze"/>
-           <h4>TAGLINE</h4>
-           Presentamos el logo de Hololyze en su versión con tagline: "Holograph it!", holografíalo.
-           <img className='Image' src={logo_tagline} alt="Logo de Hololyze con tagline"/>        
-        </p>
+           presentación en medios digitales.</p>
+        <div className='Image'><img src={logo_componentes} alt="Componentes del logo de Hololyze"/></div>
+        <h4>CONSTRUCCIÓN</h4>
+        <p>Su construcción se ha conseguido mediante una rejilla como se muestra, que iguala la altura de símbolo
+           y logotipo, al que se le aplica un cierto desnivel en las letras de los extremos para continuar el concepto.</p> 
+        <div className='Image'><img src={logo_construccion} alt="Construcción del logo de Hololyze"/></div>
+        <h4>TAGLINE</h4>
+        <p>Presentamos el logo de Hololyze en su versión con tagline: "Holograph it!", holografíalo.</p>
+        <br/>
+        <div className='Image'><img src={logo_tagline} alt="Logo de Hololyze con tagline"/></div>
         <h4>VERSIÓN VERTICAL</h4>
         <p>Versiones del logo en formato vertical unicolor y full color</p>
-        <Row gutter={[ 12,12 ]}>
+        <Row gutter={[ 20,20 ]}>
           {Array.from({ length: 6 }).map((_, i) => (
           <Col key={i} span={8}>
             <div className='logo-box' style={{background:logo_vertical[i].color}}>
@@ -155,7 +155,7 @@ const About = () => {
         <br/>
         <h4>VERSIÓN HORIZONTAL</h4>
         <p>Versiones del logo en formato horizontal unicolor y full color</p>
-        <Row gutter={[ 12,12 ]}>
+        <Row gutter={[ 20,20 ]}>
           {Array.from({ length: 6 }).map((_, i) => (
           <Col key={i} span={12}>
             <div className='logo-box' style={{background:logo_horizontal[i].color}}>
@@ -167,7 +167,7 @@ const About = () => {
         <br/>
         <h4>SÍMBOLO</h4>
         <p>Versiones del símbolo con colores corporativos</p>
-        <Row gutter={[ 12,12 ]}>
+        <Row gutter={[ 20,20 ]}>
           {Array.from({ length: 6 }).map((_, i) => (
           <Col key={i} span={8}>
             <div className='logo-box' style={{background:simbolo[i].color}}>
