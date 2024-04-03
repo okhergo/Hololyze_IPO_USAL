@@ -69,9 +69,9 @@ label {
 }
 
 .Login {
+  background-color: #f9fafd !important;
   font-size: 24px;
   font-weight: bold;
-  background-color: #f9fafd;
   color: #000a2e;
 }
 .Content {
@@ -80,8 +80,11 @@ label {
   font-weight: bold;
   background-color: #f9fafd;
   color: #000a2e;
+  overflow-x: hidden;
 }
 .Error{
+  background-color: #f9fafd;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -106,19 +109,29 @@ label {
 
 .Container {
   min-height: 90vh;
+  background-color: #f9fafd;
 }
 
 .ContentLayout{
   max-width: 90rem;
   display: flex;
-  align-items: center;
+  flex-direction: column;
+  gap:24px;
+  margin-inline: auto;
   justify-content: center;
 }
 
 .Image {
- width: 100%;
- padding: 1rem;
-}
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  }
+  .Image img {
+    width: 80%;
+    height: auto;
+    padding: 20px;
+  }
+
 
 .Grid {
   display: flex;
@@ -164,7 +177,6 @@ label {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  background-color: #fff;
 }
 
 .col-2 > .col-2-body {
