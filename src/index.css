@@ -75,7 +75,7 @@ label {
   color: #000a2e;
 }
 .Content {
-  font-size: 24px;
+  font-size: 20px;
   padding: 2vh;
   font-weight: bold;
   background-color: #f9fafd;
@@ -113,7 +113,7 @@ label {
 }
 
 .ContentLayout{
-  max-width: 90rem;
+  max-width: 80rem;
   display: flex;
   flex-direction: column;
   gap:24px;
@@ -121,17 +121,20 @@ label {
   justify-content: center;
 }
 
-.Image {
+.ImageContainer {
   display: flex;
   justify-content: center;
   text-align: center;
   }
-  .Image img {
+  .ImageContainer img {
     width: 80%;
     height: auto;
     padding: 20px;
   }
 
+  .Image{
+    width: 100%;
+  }
 
 .Grid {
   display: flex;

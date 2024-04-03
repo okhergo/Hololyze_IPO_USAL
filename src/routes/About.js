@@ -27,6 +27,10 @@ import S_Azul from "../assets/logo/Simbolo/Azul.webp"
 import logo_construccion from '../assets/logo_construccion.webp'
 import logo_componentes from '../assets/logo_componentes.png'
 import logo_tagline from '../assets/logo/logo_tagline.webp'
+import mockup1 from '../assets/mockup1.png'
+import mockup2 from '../assets/mockup2.png'
+import mockup3 from '../assets/mockup3.png'
+import mockup4 from '../assets/mockup4.png'
 
 const { Content } = Layout
 
@@ -132,15 +136,15 @@ const About = () => {
            holograma, paquetes y la letra más característica de nuestra tipografía N27, la 'Y'. Así se construye
            un símbolo minimalista, que representa la esencia del proyecto y se adapta a la perfección a su
            presentación en medios digitales.</p>
-        <div className='Image'><img src={logo_componentes} alt="Componentes del logo de Hololyze"/></div>
+        <div className='ImageContainer'><img src={logo_componentes} alt="Componentes del logo de Hololyze"/></div>
         <h4>CONSTRUCCIÓN</h4>
         <p>Su construcción se ha conseguido mediante una rejilla como se muestra, que iguala la altura de símbolo
            y logotipo, al que se le aplica un cierto desnivel en las letras de los extremos para continuar el concepto.</p> 
-        <div className='Image'><img src={logo_construccion} alt="Construcción del logo de Hololyze"/></div>
+        <div className='ImageContainer'><img src={logo_construccion} alt="Construcción del logo de Hololyze"/></div>
         <h4>TAGLINE</h4>
         <p>Presentamos el logo de Hololyze en su versión con tagline: "Holograph it!", holografíalo.</p>
         <br/>
-        <div className='Image'><img src={logo_tagline} alt="Logo de Hololyze con tagline"/></div>
+        <div className='ImageContainer'><img src={logo_tagline} alt="Logo de Hololyze con tagline"/></div>
         <h4>VERSIÓN VERTICAL</h4>
         <p>Versiones del logo en formato vertical unicolor y full color</p>
         <Row gutter={[ 20,20 ]}>
@@ -177,7 +181,10 @@ const About = () => {
           ))}
         </Row>
         <h2>MOCKUPS</h2>
-        <p>En proceso...</p>
+        <img className='Image' src={mockup1} alt="Mockup de cartel Hololyze"/>
+        <img className='Image' src={mockup4} alt="Mockup de ordenador Hololyze"/>
+        <img className='Image' src={mockup2} alt="Mockup de tarjeta de visita Hololyze"/>
+        <img className='Image' src={mockup3} alt="Mockup de camiseta Hololyze"/>
         <h2>EQUIPO DE TRABAJO</h2>
         <p>Este grupo está formado por Eduardo Juanes Ramos y Óscar Hernández Gómez de tercero del 
            Grado en Ingeniería Informática del grupo PA2, impartido por Luis Augusto Silva los
