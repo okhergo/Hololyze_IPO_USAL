@@ -62,11 +62,11 @@ const simbolo = [
 ]
 
 const colors = [
-  {name: "UCLA Gold", color: "#000a2e", hex: "#ffb400", size:6},
-  {name: "Cool Black", color: "#f9fafd", hex: "#001e5f", size:6},
-  {name: "Navy Blue", color: "#f9fafd", hex: "#003caa", size:4},
-  {name: "Cetacean Blue", color: "#f9fafd", hex: "#000a2e", size:4},
-  {name: "Ghost White", color: "#000a2e", hex: "#f9fafd", size:4},
+  {name: "UCLA Gold", color: "#000a2e", hex: "#ffb400", size:12},
+  {name: "Cool Black", color: "#f9fafd", hex: "#001e5f", size:12},
+  {name: "Navy Blue", color: "#f9fafd", hex: "#003caa", size:8},
+  {name: "Cetacean Blue", color: "#f9fafd", hex: "#000a2e", size:8},
+  {name: "Ghost White", color: "#000a2e", hex: "#f9fafd", size:8},
 ]
 
 const About = () => {
@@ -109,7 +109,7 @@ const About = () => {
            Cetacean Blue y el blanco Ghost White. Dos tonos con un ligero virado a azul, que favorecen su presentación y
            visibilidad en medios digitales, en lugar de los colores puros.</p>
           <br/>
-          <Row gutter={[ 12 ]}>
+          <Row gutter={[ 8, 8 ]}>
           {Array.from({ length: 5 }).map((_, i) => (
           <Col key={i} span={colors[i].size}>
             <div className='Color' style={{color:colors[i].color, background:colors[i].hex}}>
