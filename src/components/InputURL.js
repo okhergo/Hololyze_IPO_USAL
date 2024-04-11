@@ -2,11 +2,15 @@ import React from 'react'
 import { Button, Form, Input, message, Space } from 'antd'
 
 import logo from '../assets/logo/Simbolo/Azul.webp'
+import { useNavigate } from "react-router-dom"
 
 const InputURL = () => {
+  const navigate = useNavigate();
+
   const [form] = Form.useForm()
   const onFinish = () => {
     message.success('Submit success!')
+    window.open(form.getFieldValue('Link'))
   }
   const onFinishFailed = () => {
     message.error('Submit failed!')
