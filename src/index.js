@@ -2,12 +2,20 @@ import React from 'react'
 import ReactDOM from 'react-dom/client'
 import { RouterProvider, createBrowserRouter } from "react-router-dom"
 
+import { ClerkProvider } from '@clerk/clerk-react'
+
 import './index.css';
-import AppLayout from './App';
-import Home from './routes/Home';
-import About from './routes/About';
-import Login from './routes/Login';
-import ErrorPage from './routes/ErrorPage';
+import AppLayout from './App'
+import Home from './routes/Home'
+import About from './routes/About'
+import Login from './routes/Login'
+import ErrorPage from './routes/ErrorPage'
+
+const PUBLISHABLE_KEY = process.env.REACT_APP_VITE_CLERK_PUBLISHABLE_KEY
+ 
+if (!PUBLISHABLE_KEY) {
+  throw new Error("Missing Publishable Key")
+}
 
 const router = createBrowserRouter([
   {
@@ -32,6 +40,8 @@ const router = createBrowserRouter([
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <RouterProvider router={router}/>
+    <ClerkProvider publishableKey={PUBLISHABLE_KEY}>
+      <RouterProvider router={router}/>
+    </ClerkProvider>
   </React.StrictMode>
 )
