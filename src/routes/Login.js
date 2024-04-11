@@ -16,7 +16,7 @@ const Home = () => {
               Let's get started with your 30 day free trial.
             </p>
             <LoginForm/>
-            <p> Already have an account? <a href="/signin">Sign In</a> </p>
+            {/*<p> Already have an account? <a href="/signin">Sign In</a> </p>*/}
           </Content>
         </Col>
         <Col span={12} className="col-1">

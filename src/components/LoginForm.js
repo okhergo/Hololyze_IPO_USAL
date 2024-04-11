@@ -1,5 +1,7 @@
-import React from 'react';
-import { Button, Checkbox, Form, Input } from 'antd';
+import React from 'react'
+import { Button, Checkbox, Form, Input } from 'antd'
+import { SignedOut, SignInButton } from '@clerk/clerk-react'
+
 const onFinish = (values) => {
   console.log('Success:', values);
 };
@@ -25,7 +27,15 @@ function LoginForm(){
         </Form.Item>
 
         <Form.Item>
+            <div className='loginButtons'>
+            <SignedOut>
+                <SignInButton>
+                <input type="button" value={'Login with Clerk'} />
+            </SignInButton>
+            </SignedOut>
+
             <Button type="primary" htmlType="submit"> LogIn </Button>
+            </div>
         </Form.Item>
     </Form>
     )

@@ -113,7 +113,7 @@ label {
 }
 
 .ContentLayout{
-  max-width: 80rem;
+  max-width: 60rem;
   display: flex;
   flex-direction: column;
   gap:24px;
@@ -159,7 +159,7 @@ label {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-image: url('https://img.freepik.com/vector-gratis/vector-fondo-textura-holografica_53876-140765.jpg?t=st=1711753760~exp=1711757360~hmac=1538c45d9443f65d8619a4472f1e84e7795090be4f925c79eab2a4257d867fe9&w=826');
+  background-image: url('./assets/fondo_login.png');
   background-size: cover;
 }
 .wrapper::before{
@@ -250,7 +250,7 @@ h4{
   justify-content: center;
   height: 35vh;
   position: relative;
-  background-image: url('https://img.freepik.com/vector-gratis/fondo-efecto-holografico-abstracto_1048-7861.jpg?t=st=1711753453~exp=1711757053~hmac=6f6893ce9a84f071c4ce8c356c9dabfa048e30beca080d97dce7e75f82d59fa0&w=996');
+  background-image: url('./assets/fondo.png');
   background-size: cover;
   border-radius: 15px;
   }
@@ -262,14 +262,33 @@ h4{
     opacity: 0.6;
     border-radius: 15px;
   }
-  .img-box h2 {
-    position: absolute;
-    color: #f9fafd;
-    top: 10%;
+  .img-box h1 {
+    position: relative;
+    color: #ffb400;
+    top: -10%;
     left: 10%;
     text-align: left;
-    font-size: 40px;
+    font-size: 90px;
   }
+  .img-box h3 {
+    position: relative;
+    color: #f9fafd;
+    top: -20%;
+    left: 10%;
+    text-align: left;
+    font-size: 30px;
+  }
+
+.loginButtons{
+  padding: 1rem;
+}
+.loginButtons input{
+  background-color: #ffb400;
+  border-radius: 5px;
+  height: 2rem;
+  margin-right: 1rem;
+  width: 10rem;
+}
 
 @font-face {
   font-family: 'N27 Regular';
