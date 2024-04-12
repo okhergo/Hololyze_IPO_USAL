@@ -5,12 +5,17 @@ import logo from '../assets/logo/Simbolo/Azul.webp'
 import { useNavigate } from "react-router-dom"
 
 const InputURL = () => {
-  const navigate = useNavigate();
+  const navigate = useNavigate()
 
   const [form] = Form.useForm()
   const onFinish = () => {
-    message.success('Submit success!')
-    window.open(form.getFieldValue('Link'))
+    let link = form.getFieldValue('Link')
+    if(link.includes('amazon')){
+      message.success('Submit success!')
+      window.open(link)
+    } else {
+      message.error('Hologram not found!')
+    }
   }
   const onFinishFailed = () => {
     message.error('Submit failed!')

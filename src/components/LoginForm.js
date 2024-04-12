@@ -31,7 +31,7 @@ function LoginForm(){
             <SignedOut>
                 <SignInButton>
                 <input type="button" value={'Login with Clerk'} />
-            </SignInButton>
+                </SignInButton>
             </SignedOut>
 
             <Button type="primary" htmlType="submit"> LogIn </Button>
