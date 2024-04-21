@@ -214,6 +214,31 @@ p{
   border-radius: 10px;
 }
 
+.ant-card {
+  font-size: medium;
+  font-weight: lighter;
+}
+.ant-card h1 {
+  color:#ffb400;
+  font-size: xxx-large;
+}
+.DeluxeCard{
+  background-color: #ffb400;
+  color:#001e5f;
+}
+.DeluxeCard .ant-card-head-title, .DeluxeCard h1 {
+  color:#001e5f;
+}
+
+
+.Card{
+  background-color:#001e5f;
+  color:#f9fafd;
+}
+.Card .ant-card-head-title {
+  color:#f9fafd;
+}
+
 .spacer{
   flex-grow: 1;
 }
