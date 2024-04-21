@@ -4,14 +4,15 @@ import { RouterProvider, createBrowserRouter } from "react-router-dom"
 
 import { ClerkProvider } from '@clerk/clerk-react'
 
-import './index.css';
+import './index.css'
 import AppLayout from './App'
 import Home from './routes/Home'
 import About from './routes/About'
 import Login from './routes/Login'
 import ErrorPage from './routes/ErrorPage'
+import Pricing from './routes/Pricing'
 
-const PUBLISHABLE_KEY = process.env.REACT_APP_VITE_CLERK_PUBLISHABLE_KEY
+const PUBLISHABLE_KEY = "pk_test_aW5zcGlyZWQtbW9vc2UtMy5jbGVyay5hY2NvdW50cy5kZXYk"
  
 if (!PUBLISHABLE_KEY) {
   throw new Error("Missing Publishable Key")
@@ -33,6 +34,10 @@ const router = createBrowserRouter([
       {
         path: '/login',
         element: <Login />
+      },
+      {
+        path: '/pricing',
+        element: <Pricing />
       },
     ]
   }

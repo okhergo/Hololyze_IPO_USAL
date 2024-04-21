@@ -214,6 +214,10 @@ p{
   border-radius: 10px;
 }
 
+.spacer{
+  flex-grow: 1;
+}
+
 h3{
   font-size: 25px;
 }

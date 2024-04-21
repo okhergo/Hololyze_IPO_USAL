@@ -1,15 +1,16 @@
 import React from 'react'
 
-import { UserOutlined, HomeOutlined, SettingOutlined, InfoCircleOutlined } from '@ant-design/icons'
+import { UserOutlined, ChromeOutlined, DollarOutlined, HomeOutlined, SettingOutlined, InfoCircleOutlined } from '@ant-design/icons'
 import { Outlet, Link } from "react-router-dom"
 import { Layout, Menu } from 'antd'
 import logo from './assets/logo.png'
+import { SignedOut, SignInButton } from '@clerk/clerk-react'
 
 const { Header, Footer, Sider } = Layout
 
-const names = ["Home", "Login", "Preferences", "About us"]
-const routes = ["/", "/login", "/preferences", "/about"]
-const items = [HomeOutlined, UserOutlined, SettingOutlined, InfoCircleOutlined].map(
+const names = ["Home", "Our extension", "Pricing", "Preferences", "About us"]
+const routes = ["/", "http://www.extension.es", "/pricing", "/preferences", "/about"]
+const items = [HomeOutlined, ChromeOutlined, DollarOutlined, SettingOutlined, InfoCircleOutlined].map(
   (icon, index) => ({
     key: String(index + 1),
     icon: React.createElement(icon),
@@ -21,7 +22,15 @@ function AppLayout() {
   return (
     <Layout className="Container">
         <Header className="Header">
+            <span className='spacer'></span>
             <img src={logo} alt="Logo Hololyze"></img>
+            <span className='spacer'></span>
+            <SignedOut>
+                <SignInButton>
+                < UserOutlined />
+                </SignInButton>
+            </SignedOut>
+            
         </Header>
         <Layout className="Container">
             <Sider className="Sidebar" breakpoint="lg" collapsedWidth="0"
