@@ -1,6 +1,6 @@
 import React from 'react'
 import { Layout } from 'antd'
-import { Col, Row,  } from 'antd';
+import { Col, Row,  } from 'antd'
 
 //Logo vertical
 import V_Unicolor_Azul from "../assets/logo/Vertical/Unicolor/Azul.webp"
