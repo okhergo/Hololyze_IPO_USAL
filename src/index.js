@@ -11,6 +11,8 @@ import About from './routes/About'
 import Login from './routes/Login'
 import ErrorPage from './routes/ErrorPage'
 import Pricing from './routes/Pricing'
+import Payment from './routes/Payment'
+import Settings from './routes/Settings'
 
 const PUBLISHABLE_KEY = "pk_test_aW5zcGlyZWQtbW9vc2UtMy5jbGVyay5hY2NvdW50cy5kZXYk"
  
@@ -38,6 +40,14 @@ const router = createBrowserRouter([
       {
         path: '/pricing',
         element: <Pricing />
+      },
+      {
+        path: '/preferences',
+        element: <Settings />
+      },
+      {
+        path: '/payment/:sub',
+        element: <Payment />
       },
     ]
   }

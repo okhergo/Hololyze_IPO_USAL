@@ -1,8 +1,36 @@
 import React from 'react'
 import { Layout } from 'antd'
 import { Card, Col, Row } from 'antd'
+import { Link } from 'react-router-dom'
 
 const { Content } = Layout
+
+const suscripciones = [
+    {
+    value: 'free',
+    label: 'Gratis',
+    price: 0,
+    desc: '2 hologramas gratuitos de prueba'
+    },
+    {
+    value: 'basic',
+    label: 'Básico',
+    price: 4.99,
+    desc: '10 hologramas incluidos al mes'
+    },
+    {
+    value: 'premium',
+    label: 'Premium',
+    price: 9.99,
+    desc: '50 hologramas incluidos al mes'
+    },
+    {
+    value: 'deluxe',
+    label: 'Deluxe',
+    price: 50,
+    desc: 'Todos los hologramas que desees cada mes'
+    },
+]
 
 const Pricing = () => {
   return (
@@ -11,38 +39,16 @@ const Pricing = () => {
         <h1>Selecciona tu plan</h1>
         <br/>
         <Row gutter={[8,8]}>
+            {suscripciones.map((sub) => (
             <Col span={12}>
-                <a href="amazon.es" >
-                    <Card title="GRATIS" bordered={false}>
-                        <h1>0€</h1>
-                        2 hologramas gratuitos de prueba
+                <Link to={`/payment/${sub.value}`}>
+                    <Card title={sub.label} bordered={false}>
+                        <h1>{sub.price}</h1>
+                        {sub.desc}
                     </Card>
-                </a>
+                </Link>
             </Col>
-            <Col span={12}>
-                <a href="amazon.es" >
-                    <Card className='Card' title="BÁSICO" bordered={false}>
-                        <h1>4,99€</h1>
-                        10 hologramas incluidos al mes
-                    </Card>
-                </a>
-            </Col>
-            <Col span={12}>
-                <a href="amazon.es" >
-                    <Card className='Card' title="PREMIUM" bordered={false}>
-                        <h1>9,99€</h1>
-                        50 hologramas incluidos al mes
-                    </Card>
-                </a>
-            </Col>
-            <Col span={12}>
-                <a href="amazon.es" >
-                    <Card className='DeluxeCard' title="DELUXE" bordered={false}>
-                        <h1>50€</h1>
-                        Todos los hologramas que desees cada mes
-                    </Card>
-                </a>
-            </Col>
+            ))}
         </Row>
     </Content>
     </Layout>

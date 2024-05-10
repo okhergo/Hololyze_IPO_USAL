@@ -294,15 +294,15 @@ h4{
   .img-box h1 {
     position: relative;
     color: #ffb400;
-    top: -10%;
+    top: 0%;
     left: 10%;
     text-align: left;
-    font-size: 90px;
+    font-size: 100px;
   }
   .img-box h3 {
     position: relative;
     color: #f9fafd;
-    top: -20%;
+    top: 0%;
     left: 10%;
     text-align: left;
     font-size: 30px;
@@ -317,6 +317,37 @@ h4{
   height: 2rem;
   margin-right: 1rem;
   width: 10rem;
+}
+
+.contentStyle {
+  line-height: '260px';
+  text-align: 'center';
+  color: #003caa;
+  background-color: #f9fafd;
+  margin: 1rem;
+}
+
+.body-dark-mode{
+  background-color: #000a2e;
+  color: #f9fafd;
+}
+
+.footer-dark-mode{
+  background-color: #000a2e;
+  color: #f9fafd;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.header-dark-mode{
+  background-color: #000a2e;
+  color: #ffb400;
+  font-size: 24px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 @font-face {
