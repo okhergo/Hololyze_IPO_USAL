@@ -11,7 +11,6 @@ const Home = () => {
     <Layout className='ContentLayout'>
     <Content className='Content'>
       <CustomCarousel/>
-      <h2>URL</h2>
       <InputURL/>
     </Content>
     </Layout>

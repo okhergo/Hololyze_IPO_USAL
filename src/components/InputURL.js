@@ -1,5 +1,5 @@
 import React from 'react'
-import { Button, Form, Input, message, Space } from 'antd'
+import { Button, Form, Input, message } from 'antd'
 
 import logo from '../assets/logo/Simbolo/Azul.webp'
 
@@ -40,31 +40,18 @@ const InputURL = () => {
   return (
     <div>
       <Form form={form} layout="vertical" onFinish={onFinish} onFinishFailed={onFinishFailed} autoComplete="off">
-        <Form.Item
-          name="Link"
-          rules={[
-            {
-              required: true,
-            },
-            {
-              type: 'url',
-            },
-            {
-              type: 'string',
-              min: 6,
-            },
-          ]}
-        >
-          <Input className='Input' placeholder="Input URL" />
+        <br/>
+        <Form.Item name="Link" rules={[{required: true},{type: 'url'},{type: 'string',min: 6}]}>
+          <Input className='Input' placeholder="Insert the URL of your product"/>
         </Form.Item>
-        <Form.Item>
-          <Space>
-            <Button className='Button' type="primary" htmlType="submit">
-              <img src={logo} alt="Holograph it!"/>
-              <h2 id='h2'>Holograph it!</h2>
-            </Button>
-          </Space>
-        </Form.Item>
+        <div className="pre-next-buttons">
+          <Form.Item>
+              <Button className='Button' type="primary" htmlType="submit">
+                <img src={logo} alt="Holograph it!"/>
+                <h2 id='h2'>Holograph it!</h2>
+              </Button>
+          </Form.Item>
+        </div>
       </Form>
       { holograma ? <p>{holograma.name}</p> : <p></p>}
     </div>
