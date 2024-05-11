@@ -1,30 +1,78 @@
-import React from 'react'
-import { Layout, Switch} from 'antd'
+import React, {useState} from 'react'
+import { Layout, Switch, Collapse, Select } from 'antd'
 import '../index.css'
 
+const { Option } = Select
 const { Content } = Layout
 
-const onChange = (checked) => {
-    console.log(`switch to ${checked}`)
-    if(!checked) lightMode()
-    else darkMode()
-}
-const darkMode = () =>{
-    let element = document.body
-    element.className = "body-dark-mode"
-}
-const lightMode = () =>{
-    let element = document.body
-    element.className = "body-light-mode"
-}
-
 const Settings = () => {
+    const [selectedValue, setSelectedValue] = useState('ES')
+    
+    const handleChange = (value) => {
+        setSelectedValue(value)
+    }
+    const onChange = (value) => {
+        //Do something
+    }
+    
+    const items = [
+        {
+            key: '1',
+            label: 'Apariencia',
+            children:
+            <div>
+                <div className='confirm-plan'>
+                    <p>Activar/desactivar el modo oscuro</p>
+                    <span className='spacer'></span>
+                    <Switch onChange={onChange}></Switch>
+                </div>
+                <div className='confirm-plan'>
+                    <p>Cambiar el idioma de la aplicación</p>
+                    <span className='spacer'></span>
+                    <Select value={selectedValue} onChange={handleChange}>
+                        <Option value="ES"> Español </Option>
+                        <Option value="EN"> Inglés </Option>
+                    </Select>
+                </div>
+            </div>
+        },
+        {
+            key: '2',
+            label: 'Ajustes de la cuenta',
+            children:
+            <div>
+                <div className='confirm-plan'>
+                    <p>Permitir notificaciones</p>
+                    <span className='spacer'></span>
+                    <Switch onChange={onChange}></Switch>
+                </div>
+            </div>
+        },
+        {
+            key: '3',
+            label: 'Pedidos recientes',
+            children:
+            <div>
+                
+            </div>
+        },
+        {
+            key: '4',
+            label: 'Suscripción activa',
+            children:
+            <div>
+                
+            </div>
+        }
+    ]
+
     return (
     <Layout className='ContentLayout'>
         <Content className='Content'>
             <h1>Ajustes</h1>
-            <p>Modo Oscuro: </p>
-            <Switch onChange={onChange}></Switch>
+            <br/>
+            <p>Desde este apartado podrás configurar los ajustes principales de tu cuenta.</p>
+            <Collapse expandIconPosition="end" accordion items={items} />
         </Content>
     </Layout>
     )
