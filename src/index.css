@@ -4,6 +4,21 @@
   padding: 0;
   margin: 0;
 }
+:root {
+  --text-color: #000a2e;
+  --bg-color: #f9fafd;
+}
+
+.app {
+  color: var(--text-color);
+  background-color: var(--bg-color);
+  transition: color 0.3s, background-color 0.3s;
+}
+
+.app.dark {
+  --text-color: #f9fafd;
+  --bg-color: #000a2e;
+}
 
 form {
   display: flex;
@@ -34,9 +49,8 @@ label {
   color:#001e5f
 }
 .Button:hover {
-  background-color: #ffb400 !important;
+  background-color: #ffb400b8 !important;
   color: #003caa;
-  border: 2px solid #000a2e;
 }
 
 .Input {
@@ -78,8 +92,8 @@ label {
   font-size: 20px;
   padding: 2vh;
   font-weight: bold;
-  background-color: #f9fafd;
-  color: #000a2e;
+  background-color: var(--bg-color);
+  color: var(--text-color);
   overflow-x: hidden;
 }
 .Error{
@@ -93,23 +107,32 @@ label {
 .Error h1{
   font-size: 100px;
 }
-.ant-layout-sider-children {
-  background-color: #000a2e;
-  color: #f9fafd;
+.ant-layout-sider {
+  border-color: var(--text-color) !important;
+  background-color: var(--text-color) !important;
+  color: var(--bg-color);
+}
+.ant-menu-item {
+  color: var(--bg-color) !important;
 }
 .ant-menu-item-selected {
+  color: var(--text-color) !important;
   background-color: #003caa !important;
 }
 
 .Sidebar {
-  background-color: #000a2e;
-  color: #f9fafd;
+  background-color: var(--text-color);
+  color: var(--bg-color);
   padding: 5px;
 }
 
 .Container {
   min-height: 90vh;
-  background-color: #f9fafd;
+  background-color: var(--bg-color);
+}
+
+.paymentSteps{
+  padding: 2rem;
 }
 
 .ContentLayout{
@@ -230,7 +253,6 @@ p{
   color:#001e5f;
 }
 
-
 .Card{
   background-color:#001e5f;
   color:#f9fafd;
@@ -274,10 +296,7 @@ h4{
   }
 
 .img-box {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  height: 35vh;
+  height: 25vh;
   position: relative;
   background-image: url('./assets/fondo.png');
   background-size: cover;
@@ -291,21 +310,18 @@ h4{
     opacity: 0.6;
     border-radius: 15px;
   }
-  .img-box h1 {
+  .img-box h1,.img-box h3 {
     position: relative;
     color: #ffb400;
-    top: 0%;
+    font-size: 10rem;
+    top: -10%;
     left: 10%;
     text-align: left;
-    font-size: 100px;
   }
   .img-box h3 {
-    position: relative;
+    top: -20%;
     color: #f9fafd;
-    top: 0%;
-    left: 10%;
-    text-align: left;
-    font-size: 30px;
+    font-size: 2.5rem;
   }
 
 .loginButtons{
@@ -319,35 +335,31 @@ h4{
   width: 10rem;
 }
 
+.padding-top{
+  padding: 1rem 0;
+}
+.confirm-plan{
+  display: flex;
+  justify-content: left;
+  align-items: center;
+}
+.pre-next-buttons{
+  display: flex;
+  justify-content: center;
+}
+.pre-next-buttons .ant-btn{
+  margin: 0 0.5rem 0 0;
+}
+.ant-select{
+  min-width: 180px;
+}
+
 .contentStyle {
   line-height: '260px';
   text-align: 'center';
-  color: #003caa;
-  background-color: #f9fafd;
-  margin: 1rem;
-}
-
-.body-dark-mode{
-  background-color: #000a2e;
-  color: #f9fafd;
-}
-
-.footer-dark-mode{
-  background-color: #000a2e;
-  color: #f9fafd;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.header-dark-mode{
-  background-color: #000a2e;
-  color: #ffb400;
-  font-size: 24px;
-  font-weight: bold;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  color: var(--text-color) !important;
+  background-color: var(--bg-color);
+  margin: 0 2rem;
 }
 
 @font-face {

@@ -1,4 +1,4 @@
-import React from 'react'
+import React,{useState} from 'react'
 
 import { UserOutlined, ChromeOutlined, DollarOutlined, HomeOutlined, SettingOutlined, InfoCircleOutlined } from '@ant-design/icons'
 import { Outlet, Link } from "react-router-dom"
@@ -19,8 +19,16 @@ const items = [HomeOutlined, ChromeOutlined, DollarOutlined, SettingOutlined, In
 )
 
 function AppLayout() {
+  const [theme, setTheme] = useState('light')
+
+  const toggleTheme = () => {
+    const newTheme = theme === 'light' ? 'dark' : 'light'
+    setTheme(newTheme)
+    localStorage.setItem('theme', newTheme)
+  }
+
   return (
-    <Layout className="Container">
+    <Layout className={`Container app ${theme}`}>
         <Header className="Header">
             <span className='spacer'></span>
             <img src={logo} alt="Logo Hololyze"></img>
@@ -33,13 +41,7 @@ function AppLayout() {
             
         </Header>
         <Layout className="Container">
-            <Sider className="Sidebar" breakpoint="lg" collapsedWidth="0"
-                onBreakpoint={(broken) => {
-                    console.log(broken);
-                }}
-                onCollapse={(collapsed, type) => {
-                    console.log(collapsed, type);
-                }}>
+            <Sider className="Sidebar" breakpoint="lg" collapsedWidth="0">
                 <Menu className="Sidebar" theme='dark' mode="inline" items={items} />
             </Sider>
             <Outlet />
