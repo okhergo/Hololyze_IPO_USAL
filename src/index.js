@@ -46,7 +46,7 @@ const router = createBrowserRouter([
         element: <Settings />
       },
       {
-        path: '/payment/:sub',
+        path: '/payment',
         element: <Payment />
       },
     ]

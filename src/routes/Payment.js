@@ -1,42 +1,28 @@
-import React, { useState } from 'react'
-import { Layout } from 'antd'
-import { Select, Button, message, Steps } from 'antd'
+import React, { useState, useEffect } from 'react'
+import { Layout, Card, Select, Button, message, Steps } from 'antd'
 
-import { useParams } from "react-router-dom"
+import { useLocation, Link } from 'react-router-dom'
+import { suscripciones } from './Pricing'
 
 const { Option } = Select
 const { Content } = Layout
 
-const suscripciones = [
-    {
-    value: 'free',
-    label: 'Gratis',
-    price: 0,
-    },
-    {
-    value: 'basic',
-    label: 'Básico',
-    price: 4.99,
-    },
-    {
-    value: 'premium',
-    label: 'Premium',
-    price: 9.99,
-    },
-    {
-    value: 'deluxe',
-    label: 'Deluxe',
-    price: 50,
-    },
-]
-
 const Payment = () => {
-    let { sub } = useParams()
-    var subscriptionSelected = suscripciones.find(s => s.value === sub)
-    
+    const location = useLocation()
+    const queryParams = new URLSearchParams(location.search)
+    const defaultValueFromUrl = queryParams.get('sub')
+
+    const [selectedValue, setSelectedValue] = useState(defaultValueFromUrl || '')
+    const [selectedObject, setSelectedObject] = useState({})
+
+    useEffect(() => {
+        setSelectedValue(defaultValueFromUrl || '')
+        setSelectedObject(suscripciones.find(s => s.value === defaultValueFromUrl) || {})
+    }, [defaultValueFromUrl])
+
     const handleChange = (value) => {
-        subscriptionSelected = suscripciones.find(s => s.value === value)
-        console.log(subscriptionSelected)
+        setSelectedValue(value)
+        setSelectedObject(suscripciones.find(s => s.value === value))
     }
 
     const [current, changeStep] = useState(0)
@@ -51,17 +37,25 @@ const Payment = () => {
         title: 'Tu plan',
         content:
             <div>
-                <p>Confirma tu plan</p>
-                <Select default={subscriptionSelected.value} onChange={handleChange}>
-                {suscripciones.map((s) => (
-                    <Option key={s.value} value={s.value}>
-                        {`${s.label} ${s.price}`}
-                    </Option>
-                ))}
-                </Select>
-                <Button type="primary" onClick={() => nextStep()}>
-                    Next
-                </Button>
+                <div className='confirm-plan'>
+                    <p>Confirma tu plan</p>
+                    <span className='spacer'></span>
+                    <Select value={selectedValue} onChange={handleChange}>
+                    {suscripciones.map((s) => (
+                        <Option value={s.value}> {`${s.label} ${s.price}`} </Option>
+                    ))}
+                    </Select>
+                </div>
+                <div className='padding-top'>
+                    <Card className={selectedObject.style} title={selectedObject.label} bordered={false}>
+                        <h1>{selectedObject.price}€</h1>
+                        {selectedObject.desc}
+                    </Card>
+                </div>
+                <div className='pre-next-buttons'>
+                    <Link to={'/pricing'}><Button>Previous</Button></Link>
+                    <Button type="primary" onClick={() => nextStep()}> Next </Button>
+                </div>
             </div>
         },
         {
@@ -69,25 +63,27 @@ const Payment = () => {
         content:
             <div>
                 <p>Elige tu forma de pago</p>
-                <p>{subscriptionSelected.price}</p>
-                <Button type="primary" onClick={() => nextStep()}>
-                    Next
-                </Button>
-                <Button onClick={() => prevStep()}> Previous </Button>
-
+                <div className='pre-next-buttons'>
+                    <Button onClick={() => prevStep()}> Previous </Button>
+                    <Button type="primary" onClick={() => { message.success('¡Pago realizado con éxito!'); nextStep()}}> Pagar </Button>
+                </div>
             </div>
         },
         {
         title: 'Finalizar',
         content:
             <div>
-                <p>Gracias por suscribirte</p>
-                <a href="/">
-                    <Button  type="primary" onClick={() => message.success('¡Pago realizado con éxito!')}>
-                        Done
-                    </Button>
-                </a>
-                <Button onClick={() => prevStep()}> Previous </Button>
+                <h3>¡Gracias por suscribirte!</h3>
+                <p>Estos son los detalles de tu plan de suscripción mensual</p>
+                <div className='padding-top'>
+                    <Card className={selectedObject.style} title={selectedObject.label} bordered={false}>
+                        <h1>{selectedObject.price}€</h1>
+                        {selectedObject.desc}
+                    </Card>
+                </div>
+                <div className='pre-next-buttons'>
+                    <Link to={'/'}><Button type="primary">Volver a home</Button></Link>
+                </div>
             </div>
         },
     ]
@@ -100,7 +96,7 @@ const Payment = () => {
     <Layout className='ContentLayout'>
     <Content className='Content'> 
         <h1>Pasarela de pago</h1>
-        <Steps current={current} items={items} />
+        <Steps className="paymentSteps" current={current} items={items} />
         <div className="contentStyle">{steps[current].content}</div>
     </Content>
     </Layout>
