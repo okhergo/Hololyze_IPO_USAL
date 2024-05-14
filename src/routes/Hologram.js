@@ -4,6 +4,7 @@ import { useLocation } from 'react-router-dom'
 import '../index.css'
 import {hologramas} from '../components/InputURL'
 import WebcamStreamCapture from './Webcam'
+import Timer from '../components/Timer'
 
 const { Content } = Layout
 
@@ -26,6 +27,7 @@ const Hologram = () => {
                 <h1>{producto.name}</h1>
             }
             <WebcamStreamCapture />
+            <Timer/>
         </Content>
     </Layout>
   )
