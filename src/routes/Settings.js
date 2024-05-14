@@ -1,6 +1,7 @@
-import React, {useState} from 'react'
+import React, {useState, useContext} from 'react'
 import { Layout, Switch, Collapse, Select } from 'antd'
 import '../index.css'
+import { ThemeContext } from '../contexts/theme'
 
 const { Option } = Select
 const { Content } = Layout
@@ -11,9 +12,7 @@ const Settings = () => {
     const handleChange = (value) => {
         setSelectedValue(value)
     }
-    const onChange = (value) => {
-        //Do something
-    }
+    const [{ themeName, toggleTheme }] = useContext(ThemeContext)
     
     const items = [
         {
@@ -24,7 +23,7 @@ const Settings = () => {
                 <div className='confirm-plan'>
                     <p>Activar/desactivar el modo oscuro</p>
                     <span className='spacer'></span>
-                    <Switch onChange={onChange}></Switch>
+                    <Switch onChange={toggleTheme}></Switch>
                 </div>
                 <div className='confirm-plan'>
                     <p>Cambiar el idioma de la aplicación</p>
@@ -44,7 +43,7 @@ const Settings = () => {
                 <div className='confirm-plan'>
                     <p>Permitir notificaciones</p>
                     <span className='spacer'></span>
-                    <Switch onChange={onChange}></Switch>
+                    <Switch onChange={""}></Switch>
                 </div>
             </div>
         },

@@ -1,10 +1,11 @@
-import React,{useState} from 'react'
+import React,{ useContext } from 'react'
 
 import { UserOutlined, ChromeOutlined, DollarOutlined, HomeOutlined, SettingOutlined, InfoCircleOutlined } from '@ant-design/icons'
 import { Outlet, Link } from "react-router-dom"
 import { Layout, Menu } from 'antd'
 import logo from './assets/logo.png'
 import { SignedOut, SignInButton } from '@clerk/clerk-react'
+import { ThemeContext } from './contexts/theme'
 
 const { Header, Footer, Sider } = Layout
 
@@ -19,16 +20,10 @@ const items = [HomeOutlined, ChromeOutlined, DollarOutlined, SettingOutlined, In
 )
 
 function AppLayout() {
-  const [theme, setTheme] = useState('light')
-
-  const toggleTheme = () => {
-    const newTheme = theme === 'light' ? 'dark' : 'light'
-    setTheme(newTheme)
-    localStorage.setItem('theme', newTheme)
-  }
+  const [{ themeName }] = useContext(ThemeContext)
 
   return (
-    <Layout className={`Container app ${theme}`}>
+    <Layout className={`Container app ${themeName}`}>
         <Header className="Header">
             <span className='spacer'></span>
             <img src={logo} alt="Logo Hololyze"></img>
@@ -38,7 +33,6 @@ function AppLayout() {
                 < UserOutlined />
                 </SignInButton>
             </SignedOut>
-            
         </Header>
         <Layout className="Container">
             <Sider className="Sidebar" breakpoint="lg" collapsedWidth="0">

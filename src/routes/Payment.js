@@ -3,6 +3,7 @@ import { Layout, Card, Select, Button, message, Steps } from 'antd'
 
 import { useLocation, Link } from 'react-router-dom'
 import { suscripciones } from './Pricing'
+import PaymentForm from '../components/PaymentForm'
 
 const { Option } = Select
 const { Content } = Layout
@@ -63,6 +64,7 @@ const Payment = () => {
         content:
             <div>
                 <p>Elige tu forma de pago</p>
+                <PaymentForm />
                 <div className='pre-next-buttons'>
                     <Button onClick={() => prevStep()}> Previous </Button>
                     <Button type="primary" onClick={() => { message.success('¡Pago realizado con éxito!'); nextStep()}}> Pagar </Button>
