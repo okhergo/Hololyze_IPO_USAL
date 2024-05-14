@@ -3,11 +3,11 @@ import { Button, Checkbox, Form, Input } from 'antd'
 import { SignedOut, SignInButton } from '@clerk/clerk-react'
 
 const onFinish = (values) => {
-  console.log('Success:', values);
+  console.log('Success:', values)
 };
 const onFinishFailed = (errorInfo) => {
-  console.log('Failed:', errorInfo);
-};
+  console.log('Failed:', errorInfo)
+}
 function LoginForm(){
     return(
     <Form name="loginform" onFinish={onFinish} onFinishFailed={onFinishFailed} autoComplete="off" >
