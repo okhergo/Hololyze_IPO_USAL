@@ -1,17 +1,14 @@
-import React, {useState, useContext} from 'react'
+import React, {useContext} from 'react'
 import { Layout, Switch, Collapse, Select } from 'antd'
 import '../index.css'
 import { ThemeContext } from '../contexts/theme'
+import { useTranslation } from "react-i18next"
 
 const { Option } = Select
 const { Content } = Layout
 
 const Settings = () => {
-    const [selectedValue, setSelectedValue] = useState('ES')
-    
-    const handleChange = (value) => {
-        setSelectedValue(value)
-    }
+    const { t, i18n } = useTranslation()
     const [{ themeName, toggleTheme }] = useContext(ThemeContext)
     
     const items = [
@@ -28,9 +25,9 @@ const Settings = () => {
                 <div className='confirm-plan'>
                     <p>Cambiar el idioma de la aplicación</p>
                     <span className='spacer'></span>
-                    <Select value={selectedValue} onChange={handleChange}>
-                        <Option value="ES"> Español </Option>
-                        <Option value="EN"> Inglés </Option>
+                    <Select value={i18n.language} onChange={val => i18n.changeLanguage(val)}>
+                        <Option value="es"> Español </Option>
+                        <Option value="en"> Inglés </Option>
                     </Select>
                 </div>
             </div>
