@@ -13,6 +13,7 @@ import ErrorPage from './routes/ErrorPage'
 import Pricing from './routes/Pricing'
 import Payment from './routes/Payment'
 import Settings from './routes/Settings'
+import Hologram from './routes/Hologram'
 
 const PUBLISHABLE_KEY = "pk_test_aW5zcGlyZWQtbW9vc2UtMy5jbGVyay5hY2NvdW50cy5kZXYk"
  
@@ -48,6 +49,10 @@ const router = createBrowserRouter([
       {
         path: '/payment',
         element: <Payment />
+      },
+      {
+        path: '/hologram',
+        element: <Hologram />
       },
     ]
   }
