@@ -4,7 +4,7 @@ import { SignedOut, SignInButton } from '@clerk/clerk-react'
 
 const onFinish = (values) => {
   console.log('Success:', values)
-};
+}
 const onFinishFailed = (errorInfo) => {
   console.log('Failed:', errorInfo)
 }
@@ -40,4 +40,4 @@ function LoginForm(){
     </Form>
     )
 }
-export default LoginForm;
+export default LoginForm

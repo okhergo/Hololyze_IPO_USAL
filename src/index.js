@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom/client'
 import { RouterProvider, createBrowserRouter } from "react-router-dom"
 
 import { ClerkProvider } from '@clerk/clerk-react'
-
+import "./i18n"
 import './index.css'
 import AppLayout from './App'
 import Home from './routes/Home'

@@ -21,7 +21,10 @@ const Timer = () => {
         return () => clearInterval(interval)
     }, [])
 
-    if(minutes == 0 && seconds == 0) navigate("/")
+    if(minutes == 0 && seconds == 0){
+        getTime()
+        navigate("/")
+    }
 
     return (
         <div className="timer">

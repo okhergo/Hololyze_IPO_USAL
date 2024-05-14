@@ -21,7 +21,6 @@ function CustomCarousel(){
             <h3>¡Prueba el producto!</h3>
         </div>
     </Carousel>
-    );
+    )
 }
-
-export default CustomCarousel;
+export default CustomCarousel

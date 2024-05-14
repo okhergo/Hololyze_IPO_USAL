@@ -5,10 +5,12 @@ import { useLocation, Link } from 'react-router-dom'
 import InputURL from '../components/InputURL'
 import '../index.css'
 import {hologramas} from '../components/InputURL'
+import { useTranslation } from "react-i18next"
 
 const { Content } = Layout
 
 const Home = () => {
+  const {t} = useTranslation()
   const location = useLocation()
   const queryParams = new URLSearchParams(location.search)
   const defaultValueFromUrl = queryParams.get('product')
@@ -24,7 +26,7 @@ const Home = () => {
       <CustomCarousel/>
       <InputURL/>
       {producto &&
-      <Card title="Holograma" bordered={false}>
+      <Card bordered={false}>
         <div className="tarjeta">
           <h1>{producto.name}</h1>
           <img src={producto.foto} alt="Foto del producto"></img>
@@ -32,7 +34,7 @@ const Home = () => {
         <center>
           <Link to={`/hologram?product=${producto.id}`}>
             <Button className='Button' type="primary">
-              OBTENER HOLOGRAMA
+              {t('getHologram')}
             </Button>
           </Link>
         </center>

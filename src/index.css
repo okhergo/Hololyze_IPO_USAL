@@ -41,11 +41,18 @@ label {
   max-height: 22rem;
   margin: 0 1rem 1rem 0;
 }
-
+.menuIcons{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.menuIcons *{
+  margin: 0.2rem;
+}
 .timer{
   display: flex;
   align-items: center;
-  justify-content: baseline;
+  justify-content: center;
 }
 .timer *{
   padding: 0.5rem;
@@ -62,7 +69,15 @@ label {
 .webcam{
   border-radius: 10px;
 }
-
+.capa1{ 
+  position:absolute;
+  z-index:1;
+  height: 10rem;
+ }
+.capa2{
+  position:absolute;
+  z-index:0;
+ }
 .Button {
   margin: 5px 0;
   background-color: #ffb400;
@@ -311,7 +326,7 @@ h3{
   justify-content: center;
 }
 .webcam{
-  border-radius: 10px;
+  border-radius: 7px;
 }
 h4{
   margin-top: 10px;
@@ -340,7 +355,7 @@ h4{
   }
 
 .img-box {
-  height: 25vh;
+  height: 20rem;
   position: relative;
   background-image: url('./assets/fondo.png');
   background-size: cover;
