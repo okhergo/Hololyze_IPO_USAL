@@ -54,6 +54,15 @@ label {
   font-weight: 800;
 }
 
+.webcamWrapper{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.webcam{
+  border-radius: 10px;
+}
+
 .Button {
   margin: 5px 0;
   background-color: #ffb400;
