@@ -283,7 +283,15 @@ p{
 h3{
   font-size: 25px;
 }
-
+.webcamWrapper{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.webcam{
+  border-radius: 10px;
+}
 h4{
   margin-top: 10px;
   font-weight: normal;

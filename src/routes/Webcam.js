@@ -1,5 +1,6 @@
 import React from 'react'
 import Webcam from "react-webcam"
+import { Button } from 'antd'
 
 const WebcamStreamCapture = () => {
     const webcamRef = React.useRef(null)
@@ -51,17 +52,17 @@ const WebcamStreamCapture = () => {
     }, [recordedChunks])
   
     return (
-      <>
-        <Webcam audio={false} ref={webcamRef} />
+      <div className='webcamWrapper'>
+        <Webcam className="webcam" audio={false} ref={webcamRef} />
         {capturing ? (
-          <button onClick={handleStopCaptureClick}>Stop Capture</button>
+          <Button className='Button' type="primary" onClick={handleStopCaptureClick}>Stop Capture</Button>
         ) : (
-          <button onClick={handleStartCaptureClick}>Start Capture</button>
+          <Button className='Button' type="primary" onClick={handleStartCaptureClick}>Start Capture</Button>
         )}
         {recordedChunks.length > 0 && (
-          <button onClick={handleDownload}>Download</button>
+          <Button className='Button' type="primary" onClick={handleDownload}>Download</Button>
         )}
-      </>
+      </div>
     )
 }
 export default WebcamStreamCapture
