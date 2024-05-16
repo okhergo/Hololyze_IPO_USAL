@@ -1,5 +1,5 @@
 import React from 'react'
-import { Layout, Button, QRCode, Card } from 'antd'
+import { Layout, Button, QRCode } from 'antd'
 import '../index.css'
 import { Link } from 'react-router-dom'
 import { useTranslation } from "react-i18next"
@@ -7,7 +7,7 @@ import { useTranslation } from "react-i18next"
 const { Content } = Layout
 
 const Extension = () => {
-    const { t, i18n } = useTranslation()
+    const { t } = useTranslation()
 
     return (
     <Layout className='ContentLayout'>
@@ -15,7 +15,7 @@ const Extension = () => {
             <h1>Hololyze Chrome Extension</h1>
             <div className="fila">
                 <div>
-                    <p>Desde Hololyze hemos desarrollado una extensión para navegadores Chrome que te permitirá exprimir al máximo nuestras carcterísticas sin tener que abandonar tu plataforma de compra. Simplemente instala 'Hololyze' desde la tienda de Chrome.</p>
+                    <p>{t('extension')}</p>
                     <span className='spacer'></span>
                     <Link to={'https://chromewebstore.google.com/?hl=es&pli=1'}>
                     <Button className='ButtonQR' type="primary">

@@ -1,29 +1,35 @@
 import React from "react"
 import { useTranslation } from "react-i18next"
-import DownOutlined from '@ant-design/icons'
-import { Dropdown, message, Button } from 'antd'
+import { GlobalOutlined } from '@ant-design/icons'
+import { Dropdown, message } from 'antd'
+import ReactCountryFlag from "react-country-flag"
 
 const LanguageSelector = () => {
-    const onClick = ({ key }) => {
-        message.info(`Language changed to ${key}`)
-        i18n.changeLanguage(key)
-    }
-    const { i18n } = useTranslation()
+    const { t,i18n } = useTranslation()
     
+    const handleOnClick = (e) => {
+        i18n.changeLanguage(e.key)
+        message.info(t('languageChanged'))
+    }
+
     const items = [
         {
-        key: 'ES',
-        label: <Button onClick={() => onClick('es')}>ES</Button>
+        key: 'es',
+        label: <p><ReactCountryFlag countryCode="ES" />Español</p>
         },
         {
-        key: 'EN',
-        label: <Button onClick={() => onClick('en')}>EN</Button>
+        key: 'en',
+        label: <p><ReactCountryFlag countryCode="GB" />English</p>
+        },
+        {
+        key: 'pt',
+        label: <p><ReactCountryFlag countryCode="PT" />Português</p>
         },
     ]
 
     return (
-        <Dropdown menu={{ items }}>
-            <Button type="primary" icon={<DownOutlined />}/>
+        <Dropdown menu={{ onClick: handleOnClick, items: items }}>
+            <GlobalOutlined />
         </Dropdown>
     )
 }

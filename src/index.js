@@ -17,8 +17,8 @@ import Hologram from './routes/Hologram'
 import Extension from './routes/Extension'
 import { ThemeProvider } from './contexts/theme'
 
-const PUBLISHABLE_KEY = "pk_test_aW5zcGlyZWQtbW9vc2UtMy5jbGVyay5hY2NvdW50cy5kZXYk"
- 
+const PUBLISHABLE_KEY = process.env.REACT_APP_CLERK_KEY
+
 if (!PUBLISHABLE_KEY) {
   throw new Error("Missing Publishable Key")
 }

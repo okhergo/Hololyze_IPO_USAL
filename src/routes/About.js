@@ -1,6 +1,7 @@
 import React from 'react'
 import { Layout } from 'antd'
 import { Col, Row,  } from 'antd'
+import { useTranslation } from 'react-i18next'
 
 //Logo vertical
 import V_Unicolor_Azul from "../assets/logo/Vertical/Unicolor/Azul.webp"
@@ -70,44 +71,33 @@ const colors = [
 ]
 
 const About = () => {
+  const { t } = useTranslation()
   return (
     <Layout className='ContentLayout'>
     <Content className='Content'>
-        <h1>About us</h1>
-        <h2>DESCRIPCIÓN</h2>
-        <p>Hololyze es un proyecto de la asignatura Interacción Persona-Ordenador. Se trata de una aplicación
-           web que busca mejorar el proceso de compra online, permitiendo probar los productos antes de
-           comprarlos por medio de la ultimísima tecnología en hologramas.</p>
-        <p>¿Sabías que Amazon tiene un total de 18.000 pedidos al día en España? De estos, 1 de cada 5 se 
-           devuelven, mientras que en las tiendas esta cifra se reduce a un 9%.</p>
-        <p>Con HOLOLYZE podrás probar los productos antes de comprarlos. Una innovadora tecnología por holograma
-           a través del que podrás probar y visualizar el producto, incentivando la compra online y todos sus
-           beneficios de la comodidad de comprar sin necesidad de salir de casa.</p>
+        <h1>{t('aboutUsTitle')}</h1>
+        <h2>{t('descriptionTitle')}</h2>
+        <p>{t('description1')}</p>
+        <p>{t('description2')}</p>
+        <p>{t('description3')}</p>
         <h4>Hololyze: Holograph it!</h4>
-        <h2>IDENTIDAD VISUAL</h2>
-        <h3>Introducción</h3>
-        <p>Presentamos la identidad visual de Hololyze, que pretende representar los valores de la marca, 
-           uniendo los conceptos de la holografía y la paquetería, que definen los 3 pilares principales de
-           este proyecto: </p>
-        <h4>PRUEBA DE PRODUCTOS</h4>
-        <p>Facilita la decisión de compra con el uso de sofisticados hologramas.</p>
-        <h4>AHORRO DE TIEMPO</h4>
-        <p>Evita comprar productos que no deseabas y papeleo innecesario.</p>
+        <h2>{t('visualTitle')}</h2>
+        <h3>{t('introductionTitle')}</h3>
+        <p>{t('introduction')}</p>
+        <h4>{t('introTitleStatement1')}</h4>
+        <p>{t('introStatement1')}</p>
+        <h4>{t('introTitleStatement2')}</h4>
+        <p>{t('introStatement2')}</p>
         <h4>ECO-FRIENDLY</h4>
-        <p>Cuida el medio ambiente reduciendo los transportes por devoluciones.</p>
+        <p>{t('introStatement3')}</p>
         <h3>Colores</h3>
-        <p>Nuestra paleta de color cuenta con nuestros dos colores principales: UCLA Gold y Cool Black.</p>
+        <p>{t('colors')}</p>
         <h4>COOL BLACK #001e5f</h4>
-        <p>Cool Black es un color azulado, que transmite profesionalismo, estabilidad y garantía, tal como 
-           nuestro producto. Además, conecta con el mundo de la tecnología y en especial de la holografía por
-           su aparición en películas de esta manera.</p>
+        <p>{t('colorsBlack')}</p>
         <h4>UCLA GOLD #ffb400</h4>
-        <p>Por su parte el UCLA Gold, que une con el concepto de las cajas y los paquetes, transmite experiencia,
-           seguridad y confiabilidad, como se asocia a las principales empresas de transporte y entidades financieras.</p>
-        <h4>Complementarios</h4>
-        <p>En adición, sumamos un Navy Blue como color de resalte, que completa la paleta cromática junto con el negro
-           Cetacean Blue y el blanco Ghost White. Dos tonos con un ligero virado a azul, que favorecen su presentación y
-           visibilidad en medios digitales, en lugar de los colores puros.</p>
+        <p>{t('colorsGold')}</p>
+        <h4>{t('colorsAuxTitle')}</h4>
+        <p>{t('colorsAux')}</p>
           <br/>
           <Row gutter={[ 8, 8 ]}>
           {Array.from({ length: 5 }).map((_, i) => (
@@ -120,33 +110,25 @@ const About = () => {
           ))}
         </Row>
         <br/>
-        <h3>Tipografía</h3>
-        <p>La familia tipografíca N27, de la fundición Atipo, es la elegida para representar a Hololyze.
-           Una tipografía neogrotesca de corte rectangular sin serifa, que cuenta con un alto contraste
-           en la unión de los vertices, convirtiéndola en una fuente con mucha personalidad pero sin perjudicar
-           su gran legibilidad. Transmite un aspecto tecnológico y moderno, manteniendo una claridad que la
-           hacen ideal para diseño web y editorial. Perfecta para transmitir los valores de marca de Hololyze.</p>
+        <h3>{t('typographyTitle')}</h3>
+        <p>{t('typography')}</p>
         <p className='tipography'>Aa</p>
         <h4>N27 REGULAR</h4>
         <p>A B C D E F G H Y J K L M N Ñ O P Q R S T U V W X Y Z<br/>
            a b c d e f g h y j k l m n ñ o p q r s t u v w x y z<br/>
            1 2 3 4 5 6 7 8 9 0 . : , ; - ( )</p>
         <h3>Logo</h3>
-        <p>El logo de Hololyze surge de la abstración de tres elementos clave que caracterizan la marca:
-           holograma, paquetes y la letra más característica de nuestra tipografía N27, la 'Y'. Así se construye
-           un símbolo minimalista, que representa la esencia del proyecto y se adapta a la perfección a su
-           presentación en medios digitales.</p>
+        <p>{t('logo')}</p>
         <div className='ImageContainer'><img src={logo_componentes} alt="Componentes del logo de Hololyze"/></div>
-        <h4>CONSTRUCCIÓN</h4>
-        <p>Su construcción se ha conseguido mediante una rejilla como se muestra, que iguala la altura de símbolo
-           y logotipo, al que se le aplica un cierto desnivel en las letras de los extremos para continuar el concepto.</p> 
+        <h4>{t('constructionTitle')}</h4>
+        <p>{t('construction')}</p> 
         <div className='ImageContainer'><img src={logo_construccion} alt="Construcción del logo de Hololyze"/></div>
         <h4>TAGLINE</h4>
-        <p>Presentamos el logo de Hololyze en su versión con tagline: "Holograph it!", holografíalo.</p>
+        <p>{t('tagline')}</p>
         <br/>
         <div className='ImageContainer'><img src={logo_tagline} alt="Logo de Hololyze con tagline"/></div>
-        <h4>VERSIÓN VERTICAL</h4>
-        <p>Versiones del logo en formato vertical unicolor y full color</p>
+        <h4>{t('verticalVersionTitle')}</h4>
+        <p>{t('verticalVersion')}</p>
         <Row gutter={[ 20,20 ]}>
           {Array.from({ length: 6 }).map((_, i) => (
           <Col key={i} span={8}>
@@ -157,8 +139,8 @@ const About = () => {
           ))}
         </Row>
         <br/>
-        <h4>VERSIÓN HORIZONTAL</h4>
-        <p>Versiones del logo en formato horizontal unicolor y full color</p>
+        <h4>{t('horizontalVersionTitle')}</h4>
+        <p>{t('horizontalVersion')}</p>
         <Row gutter={[ 20,20 ]}>
           {Array.from({ length: 6 }).map((_, i) => (
           <Col key={i} span={12}>
@@ -169,8 +151,8 @@ const About = () => {
           ))}
         </Row>
         <br/>
-        <h4>SÍMBOLO</h4>
-        <p>Versiones del símbolo con colores corporativos</p>
+        <h4>{t('symbolTitle')}</h4>
+        <p>{t('symbol')}</p>
         <Row gutter={[ 20,20 ]}>
           {Array.from({ length: 6 }).map((_, i) => (
           <Col key={i} span={8}>
@@ -185,11 +167,8 @@ const About = () => {
         <img className='Image' src={mockup4} alt="Mockup de ordenador Hololyze"/>
         <img className='Image' src={mockup2} alt="Mockup de tarjeta de visita Hololyze"/>
         <img className='Image' src={mockup3} alt="Mockup de camiseta Hololyze"/>
-        <h2>EQUIPO DE TRABAJO</h2>
-        <p>Este grupo está formado por Eduardo Juanes Ramos y Óscar Hernández Gómez de tercero del 
-           Grado en Ingeniería Informática del grupo PA2, impartido por Luis Augusto Silva los
-           viernes en el horario de 10:00 a 13:00 de la mañana en el Aula de Informática 6 de la
-           Facultad de Ciencias en el edificio de La Merced.</p>
+        <h2>{t('teamTitle')}</h2>
+        <p>{t('team')}</p>
     </Content>
     </Layout>
   )

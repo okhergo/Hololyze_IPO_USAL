@@ -3,12 +3,14 @@ import { Layout,Card,Select,Form,Result,Divider,DatePicker,Button,Input,message,
 
 import { useLocation, Link } from 'react-router-dom'
 import { suscripciones } from './Pricing'
+import { useTranslation } from 'react-i18next'
 
 const { Option } = Select
 const { Content } = Layout
 
 const Payment = () => {
     //Payment Form
+  const {t} = useTranslation()
     const [form] = Form.useForm()
     const [submittable, setSubmittable] = React.useState(false)
 
@@ -46,11 +48,11 @@ const Payment = () => {
     }
     const steps = [
         {
-        title: 'Tu plan',
+        title: t('yourPlan'),
         content:
             <div>
                 <div className='confirm-plan'>
-                    <p>Confirma tu plan</p>
+                    <p>{t('confirmPlan')}</p>
                     <span className='spacer'></span>
                     <Select value={selectedValue} onChange={handleChange}>
                     {suscripciones.map((s) => (
@@ -65,36 +67,36 @@ const Payment = () => {
                     </Card>
                 </div>
                 <div className='pre-next-buttons'>
-                    <Link to={'/pricing'}><Button>Previous</Button></Link>
-                    <Button type="primary" onClick={() => nextStep()}> Next </Button>
+                    <Link to={'/pricing'}><Button>{t('previous')}</Button></Link>
+                    <Button type="primary" onClick={() => nextStep()}> {t('next')} </Button>
                 </div>
             </div>
         },
         {
-        title: 'Procedimiento de pago',
+        title: t('paymentProcedure'),
         content:
             <div>
-                <p>Introduce tus datos de pago</p>
+                <p>{t('insertPaymentData')}</p>
                 <br/>
                 <Form form={form} name="validateOnly" layout="vertical" autoComplete="off">
-                    <Form.Item name="card" label="Número de tarjeta" rules={[{required: true}]}>
-                            <Input />
+                    <Form.Item name="card" label={t('cardNumber')} rules={[{required: true}]}>
+                        <Input />
                     </Form.Item>
-                    <Form.Item name="name" label="Nombre del titular" rules={[{required: true}]}>
-                            <Input />
+                    <Form.Item name="name" label={t('cardName')} rules={[{required: true}]}>
+                        <Input />
                     </Form.Item>
                     <div className='filaForm'>
-                        <Form.Item name="fecha" label="Fecha de vencimiento" rules={[{required: true}]}>
+                        <Form.Item name="fecha" label={t('cardDate')} rules={[{required: true}]}>
                             <DatePicker picker="month" />
                         </Form.Item>
-                        <Form.Item name="code" label="Código de seguridad" rules={[{required: true}]}>
+                        <Form.Item name="code" label={t('cardCode')} rules={[{required: true}]}>
                             <Input />
                         </Form.Item>
                     </div>
                     <Divider/>
                     <div className='pre-next-buttons'>
-                        <Button onClick={() => prevStep()}> Previous </Button>
-                        <Button type="primary" htmlType="submit" onClick={() => { message.success('¡Pago realizado con éxito!'); nextStep()}} disabled={!submittable}>Pagar</Button>
+                        <Button onClick={() => prevStep()}> {t('previous')} </Button>
+                        <Button type="primary" htmlType="submit" onClick={() => { message.success(t('successfulPayment')); nextStep()}} disabled={!submittable}>{t('pay')}</Button>
                     </div>
                 </Form>
             </div>
@@ -105,11 +107,11 @@ const Payment = () => {
             <div>
                 <Result
                 status="success"
-                title="¡Gracias por suscribirte!"
+                title={t('thanksSub')}
                 subTitle="Order number: 2017182818828182881"
                 extra={[
                 <div>
-                    <p>Estos son los detalles de tu plan de suscripción mensual</p>
+                    <p>{t('paymentDetails')}</p>
                     <div className='padding-top'>
                         <Card className={selectedObject.style} title={selectedObject.label} bordered={false}>
                             <h1>{selectedObject.price}€</h1>
@@ -118,8 +120,8 @@ const Payment = () => {
                     </div>
 
                 </div>,                
-                <Link to={'/pricing'}><Button>Comprar de nuevo</Button></Link>,
-                <Link to={'/'}><Button type="primary">Volver a home</Button></Link>,
+                <Link to={'/pricing'}><Button>{t('buyAgain')}</Button></Link>,
+                <Link to={'/'}><Button type="primary">{t('backHome')}</Button></Link>,
                 ]}
                 />
             </div>
@@ -133,7 +135,7 @@ const Payment = () => {
     return (
     <Layout className='ContentLayout'>
     <Content className='Content'> 
-        <h1>Pasarela de pago</h1>
+        <h1>{t('paymentProcess')}</h1>
         <Steps className="paymentSteps" current={current} items={items} />
         <div className="contentStyle">{steps[current].content}</div>
     </Content>

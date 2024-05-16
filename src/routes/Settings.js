@@ -56,7 +56,8 @@ const Settings = () => {
                     <span className='spacer'></span>
                     <Select value={i18n.language} onChange={val => i18n.changeLanguage(val)}>
                         <Option value="es"> Español </Option>
-                        <Option value="en"> Inglés </Option>
+                        <Option value="en"> English </Option>
+                        <Option value="pt"> Português </Option>
                     </Select>
                 </div>
             </div>
