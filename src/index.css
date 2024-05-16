@@ -6,6 +6,7 @@
 }
 :root {
   --text-color: #000a2e;
+  --sec-color: #001e5f;
   --bg-color: #f9fafd;
 }
 
@@ -17,6 +18,7 @@
 
 .app.dark {
   --text-color: #f9fafd;
+  --sec-color: #003caa;
   --bg-color: #000a2e;
 }
 
@@ -46,8 +48,8 @@ label {
   align-items: center;
   justify-content: center;
 }
-.menuIcons *{
-  margin: 0.2rem;
+.menuIcons div{
+  margin: 0 0 0 5px;
 }
 .timer{
   display: flex;
@@ -78,6 +80,21 @@ label {
   position:absolute;
   z-index:0;
  }
+ .ButtonQR {
+   margin: 5px 0;
+   background-color: #001e5f;
+   color:#f9fafd;
+   font-size: medium;
+   font-weight: 600;
+   height: 2.5rem;
+   display: flex;
+   padding: 1rem;
+   align-items: center;
+   justify-content: center;
+ }
+ .ButtonQR:hover {
+   background-color: #003caa !important;
+ }
 .Button {
   margin: 5px 0;
   background-color: #ffb400;
@@ -97,7 +114,7 @@ label {
   margin: 0px;
   padding: 0.5rem;
   font-size: 2rem;
-  color:#001e5f
+  color: #001e5f
 }
 .Button:hover {
   background-color: #ffb400b8 !important;
@@ -119,10 +136,13 @@ label {
   align-items: center;
   justify-content: center;
 }
-.Header img {
-    width: 400px;
-    height: auto;
-    border-radius: 15px;
+.logoHeader {
+  position: absolute;
+  margin-top: 1rem;
+}
+.logoHeader img{
+  width: 400px;
+  height: auto;
 }
 
 .Footer {
@@ -167,7 +187,7 @@ label {
   color: var(--bg-color) !important;
 }
 .ant-menu-item-selected {
-  color: var(--text-color) !important;
+  color: #f9fafd !important;
   background-color: #003caa !important;
 }
 
@@ -270,7 +290,7 @@ h1{
   margin: 20px 0px 5px 0px;
 }
 h2{
-  color:#003caa;
+  color:var(--sec-color);
   margin: 20px 0px 5px 0px;
 }
 p{
@@ -318,6 +338,7 @@ p{
 
 h3{
   font-size: 25px;
+  color: var(--sec-color);
 }
 .webcamWrapper{
   display: flex;
@@ -419,6 +440,51 @@ h4{
   color: var(--text-color) !important;
   background-color: var(--bg-color);
   margin: 0 2rem;
+}
+.filaForm{
+  display: flex;
+  flex: auto;
+  justify-content: space-between;
+  align-items: center;
+}
+.filaForm *{
+  
+  flex-grow: 1;
+}
+.fila{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.fila *{
+  margin: 0.2rem;
+}
+.fila .imageWrapper{
+  display: flex;
+  height: 15rem;
+  justify-content: center;
+  align-items: center;
+}
+.no-margin{
+  margin: 0;
+}
+.imageWrapper{
+  height: 20rem;
+  width: 20rem;
+}
+.imageWrapper img{
+  border-radius: 10px;
+  height: 100%;
+  width: auto;
+  margin: 0;
+  padding: 0;
+  object-fit: cover;
+}
+.ant-collapse{
+  background-color: #f9fafd;
+}
+.ant-steps *{
+  color: var(--text-color) !important;
 }
 
 @font-face {

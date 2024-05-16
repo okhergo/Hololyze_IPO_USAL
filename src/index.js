@@ -14,6 +14,7 @@ import Pricing from './routes/Pricing'
 import Payment from './routes/Payment'
 import Settings from './routes/Settings'
 import Hologram from './routes/Hologram'
+import Extension from './routes/Extension'
 import { ThemeProvider } from './contexts/theme'
 
 const PUBLISHABLE_KEY = "pk_test_aW5zcGlyZWQtbW9vc2UtMy5jbGVyay5hY2NvdW50cy5kZXYk"
@@ -54,6 +55,10 @@ const router = createBrowserRouter([
       {
         path: '/hologram',
         element: <Hologram />
+      },
+      {
+        path: '/extension',
+        element: <Extension />
       },
     ]
   }

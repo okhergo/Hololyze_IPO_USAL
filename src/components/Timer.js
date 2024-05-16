@@ -27,13 +27,17 @@ const Timer = () => {
     }
 
     return (
-        <div className="timer">
-            <p>{minutes < 10 ? "0" + minutes : minutes}</p>
-            <p className="text">Minutos</p>
-            <p></p>
-            <p> {seconds < 10 ? "0" + seconds : seconds}</p>
-            <p className="text">Segundos</p>
-        </div>
+        <center>
+            <br></br>
+            <p>Tiempo restante de uso</p>
+            <div className="timer">
+                <p>{minutes < 10 ? "0" + minutes : minutes}</p>
+                <p className="text">Minutos</p>
+                <p></p>
+                <p> {seconds < 10 ? "0" + seconds : seconds}</p>
+                <p className="text">Segundos</p>
+            </div>
+        </center>
     )
 }
 export default Timer

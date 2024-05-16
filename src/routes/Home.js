@@ -26,18 +26,22 @@ const Home = () => {
       <CustomCarousel/>
       <InputURL/>
       {producto &&
-      <Card bordered={false}>
-        <div className="tarjeta">
-          <h1>{producto.name}</h1>
-          <img src={producto.foto} alt="Foto del producto"></img>
+      <Card className='Card' bordered={false}>
+        <div className="fila">
+          <div>
+            <h1>{producto.name}</h1>
+            <p>{producto.desc}</p>
+            <span className='spacer'></span>
+            <Link to={`/hologram?product=${producto.id}`}>
+              <Button className='Button' type="primary">
+                {t('getHologram')}
+              </Button>
+            </Link>
+          </div>
+          <div className='imageWrapper'>
+            <img src={producto.foto} alt="Foto del producto"></img>
+          </div>
         </div>
-        <center>
-          <Link to={`/hologram?product=${producto.id}`}>
-            <Button className='Button' type="primary">
-              {t('getHologram')}
-            </Button>
-          </Link>
-        </center>
       </Card>
       }
     </Content>

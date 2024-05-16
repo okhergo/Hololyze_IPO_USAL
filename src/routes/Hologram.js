@@ -26,17 +26,18 @@ const Hologram = () => {
   return (
     <Layout className='ContentLayout'>
       <Content className='Content'>
-        <Link to='/'>{React.createElement(LeftOutlined)}{t('back')}</Link>
+        <div className='fila'>
+          <Link to='/'>{React.createElement(LeftOutlined)}{t('back')}</Link>
+          <span className='spacer'></span>
+          <h2>{producto.name}</h2>
+        </div>
         <Card>
           <div className='webcamWrapper'>
-            {producto &&
-              <h2>{producto.name}</h2>
-            }
             <img className='capa1' src={producto.foto} alt="Holograma"/>
             <WebcamStreamCapture className='capa2' />
-            <Timer/>
           </div>
         </Card>
+        <Timer/>
       </Content>
     </Layout>
   )

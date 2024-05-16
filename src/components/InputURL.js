@@ -7,13 +7,15 @@ export const hologramas = [
   {
     id: 1,
     link:'https://www.amazon.es/BOYA-M1-Micr%C3%B3fono-profesional-digitales/dp/B09QKYWPMD/ref=asc_df_B07GKZNDLF/?tag=googshopes-21&linkCode=df0&hvadid=298022511556&hvpos=&hvnetw=g&hvrand=16372666648616651655&hvpone=&hvptwo=&hvqmt=&hvdev=m&hvdvcmdl=&hvlocint=&hvlocphy=1005527&hvtargid=pla-649030623256&mcid=6eee15f618dc37698aea848a513e885e&th=1',
-    name: 'BOYA BY-M1S Micrófono de Solapa',
+    name: 'BOYA BY-M1S',
+    desc: '▶【PROFESSIONAL MICROPHONE】 : BY-M1S mini micrófono diseñado con una cápsula omnidireccional actualizada en el interior y captura el sonido con calidad de transmisión desde un rango de 360 grados.El parabrisas incluido protege contra el ruido del viento para un sonido más claro.',
     foto: 'https://m.media-amazon.com/images/I/61AXDjKwuQL._AC_SY450_.jpg',
   },
   {
     id: 2,
     link:'https://www.amazon.es/gp/product/B015R0IQGW/ref=ewc_pr_img_1?smid=A1AT7YVPFBWXBL&psc=1',
-    name: 'RØDE VideoMicro Micrófono',
+    name: 'RØDE VideoMicro',
+    desc: '▶【PROFESSIONAL MICROPHONE】 : BY-M1S mini micrófono diseñado con una cápsula omnidireccional actualizada en el interior y captura el sonido con calidad de transmisión desde un rango de 360 grados.El parabrisas incluido protege contra el ruido del viento para un sonido más claro.',
     foto: 'https://m.media-amazon.com/images/I/51IHZvFWMKL._AC_SY355_.jpg',
   }
 ]

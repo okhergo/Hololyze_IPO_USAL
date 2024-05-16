@@ -11,7 +11,7 @@ import LanguageSelector from './components/LanguageSelector'
 const { Header, Footer, Sider } = Layout
 
 const names = ["Home", "Our extension", "Pricing", "Preferences", "About us"]
-const routes = ["/", "https://chromewebstore.google.com/?hl=es&pli=1", "/pricing", "/preferences", "/about"]
+const routes = ["/", "/extension", "/pricing", "/preferences", "/about"]
 const items = [HomeOutlined, ChromeOutlined, DollarOutlined, SettingOutlined, InfoCircleOutlined].map(
   (icon, index) => ({
     key: String(index + 1),
@@ -27,7 +27,7 @@ function AppLayout() {
     <Layout className={`Container app ${themeName}`}>
       <Header className="Header">
         <span className='spacer'></span>
-        <img src={logo} alt="Logo Hololyze"></img>
+        <a className="logoHeader" href="/" alt="Home-Hololyze"><img src={logo} alt="Logo Hololyze"></img></a>
         <span className='spacer'></span>
 
         <div className='menuIcons'>
